@@ -1023,12 +1023,11 @@
             }
             $('.nav-link').click(function(){
                 navMenuActive($(this),null);
-                var first = $(location).attr('pathname');
-                first.toLowerCase();
-                console.log("Path: ",first.split('/'));
-                first = first.split("/")[2];
-                console.log("Final : ",first);
-                ChangeUrl("AKH Landing Pages","/"+first+"/"+$(this).attr("alt-value")+location.search);
+                var path = $(location).attr('pathname');
+                path.toLowerCase();
+                var first = path.split("/")[1];
+                var second = path.split("/")[2];
+                ChangeUrl("AKH Landing Pages","/"+first+"/"+second+"/"+$(this).attr("alt-value")+location.search);
             });
             // End Menu Click Action
         });

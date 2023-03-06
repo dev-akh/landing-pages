@@ -2733,14 +2733,11 @@
                         
                         if(altValue!='register'){
                             navMenuActive($(this),null);
-                            var first = $(location).attr('pathname');
-                            console.log("Org :",first);
-                            first.indexOf(3);
-                            console.log("Path 1st after index of 2: ",first);
-                            first.toLowerCase();
-                            first = first.split("/")[2];
-                            console.log("Final : ",first);
-                            ChangeUrl("The Your Title ","/"+first+"/"+altValue+location.search);
+                            var path = $(location).attr('pathname');
+                            path.toLowerCase();
+                            var first = path.split("/")[1];
+                            var second = path.split("/")[2];
+                            ChangeUrl("The Your Title ","/"+first+"/"+second+"/"+altValue+location.search);
                         }else{
                             alert("Register Click!");
 							 var href_link = $("#entrant-topbar-right1 .btn-success").attr("href");
