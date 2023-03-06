@@ -1,0 +1,1051 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+    #main-container,#main-content,#page-content{width:100% !important;margin:0px !important;padding:0px !important;}
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    *,.roboto{
+        font-family: 'Roboto', sans-serif;
+    }
+    * {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+        supported by Chrome, Edge, Opera and Firefox */
+    }
+    #myTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 52px;
+    right: 31px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: #a02b2b;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 45px;
+}
+#myTopBtn:hover {
+    background: #4986e7;
+}
+    h1.roboto-light{
+        font-family: 'Roboto', sans-serif;
+    }
+    label.roboto-light{
+        color:#979797;
+    }
+    p.roboto-light{
+        color:#979797;
+    }
+    p.roboto-regular{
+        font-weight: 400;
+        font-size: 18px;
+        color:#4E4E4E;
+    }
+    .timeline{
+        border-radius: 8px;
+        background-color: rgba(169, 199, 214, 0.34);
+    }
+    div.position-card{
+        background-color: white;
+        height: 100%;
+    }
+    div.position-card>span.position-prize{
+        font-size: 36px;
+    }
+    h3.roboto-regular{
+        font-size: 29px;
+        font-weight: 400;
+    }
+    div.position-card.first{
+        border-top:8px blue solid;
+    }
+    div.position-card.first>span.position-prize{
+        color:blue;
+    }
+    div.position-card.second{
+        border-top:8px rgb(5, 184, 5) solid;
+    }
+    div.position-card.second>span.position-prize{
+        color:rgb(5, 184, 5) ;
+    }
+    div.position-card.third{
+        border-top:8px red solid;
+    }
+    div.position-card.third>span.position-prize{
+        color:red;
+    }
+    .fa-icon-section{
+        border-radius: 12px;
+    }
+    .store,.bullhorn{
+        color:skyblue;
+    }
+    .bullhorn{
+        -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+    }
+    #event_submit_an_entry_btn{
+        background: #00567B !important;
+        color: white !important;
+    }
+    #event_submit_an_entry_btn:hover{
+        background-color: #0082BB !important;
+    }
+    /* Line Stepper */
+    .box {
+        width: 130px;
+        height: auto;
+        background-color: black;
+        color: #fff;
+        padding: 10px;
+        position: relative;
+        margin: 50px;
+        float: left;
+        border-radius: 15px;
+        font-size: 10px;
+    }
+    
+    
+    .box.arrow-top:after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        /* border-bottom: 15px solid black; */
+    }
+    
+    
+    .box.arrow-bottom:after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        /* border-top: 15px solid black; */
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: none;
+    }
+    
+    /* Box arrow */
+    .stepper-card-box{
+        padding-top:200px;
+    }
+    .stepper-line{
+        width: 98%;
+        border:4px gray solid;
+        position: relative;
+    }
+    .upper-chard-box{
+        position: absolute;
+        bottom:-10px;
+    }
+    .lower-chard-box{
+        position: absolute;
+        top:-10px;
+    }
+    .upper-chard-box>.rounded-bubble{
+        left: 53%;
+        bottom: 0;
+    }
+    .lower-chard-box>.rounded-bubble{
+        left:53%;
+        top: 0;
+    }
+    
+    .lower-chard-box.first{
+        left:-30px;
+    }
+    .upper-chard-box.first{
+        left:70px;
+    }
+    .lower-chard-box.second{
+        left:170px;
+    }
+    .upper-chard-box.second{
+        left:270px;
+    }
+    .lower-chard-box.third{
+        left: 370px;
+    }
+    .rounded-bubble{
+        border-radius: 50%;
+        width:20px;
+        height:20px;
+        display: inline-block;
+        position: absolute;
+        
+    }
+    .lower-chard-box.first>.box.arrow-top:after{
+        border-bottom: 15px solid #005B82;
+    }
+    .lower-chard-box.second>.box.arrow-top:after{
+        border-bottom: 15px solid red;
+    }
+    .lower-chard-box.third>.box.arrow-top:after{
+        border-bottom: 15px solid #3C8930;
+    }
+    .upper-chard-box.first>.box.arrow-bottom:after{
+        border-top: 15px solid #0082BB;
+    }
+    .upper-chard-box.second>.box.arrow-bottom:after{
+        border-top: 15px solid orange;
+    }
+    .up-line-caption{
+        display: inline-block;
+        position: absolute;
+        left: 40%;
+        top: -20px; 
+        font-size: 16px;
+    }
+    .down-line-caption{
+        display: inline-block;
+        position: absolute;
+        left: 40%;
+        bottom: 15px; 
+        font-size: 16px;
+    }
+    /* End Line Stepper */
+    .bg-ecobank{
+        background-color: #2B5C83;
+    }
+    .nav-item{
+        cursor: pointer;
+    }
+    #event_actions{
+        height: 100px;
+        background-color: #eff0f2;
+    }
+    #event_an_entry_btn{
+        background-color: #0082BB;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        background-color: #f7faff !important;
+        border-radius: 0;
+        font-weight: bold;
+        color: #005B82 !important;
+    }
+    .nav>li>a:hover, .nav>li>a:focus {
+        background: #e5e7eb4a !important;
+        border-radius: 0;
+    }
+    ul.f-18,ol.f-18{
+        font-size: 18px;
+    }
+    ul.list-dash{
+        list-style-type: none;
+    }
+    ul.list-dash>li:before{
+        content: "–"; /* en dash */
+        position: absolute;
+        margin-left: -1.1em; 
+    }
+
+    @media (max-width: 792px){
+        .event-title{
+            font-size: 20px;
+            margin-right: auto;
+        }
+        .navbarNavAltMarkup{
+            margin: auto;
+        }
+        .box {
+            width: 100px;
+        }
+        .stepper-card-box {
+            padding: 48% 0px;
+        }
+        .up-line-caption,.down-line-caption {
+            font-size: 12px;
+        }
+        .up-line-caption {
+            top: -8%;
+        }
+        .down-line-caption {
+            bottom: 9%;
+        }
+        .lower-chard-box.first {
+            left: -14%;
+        }
+        .upper-chard-box.first {
+            left: 0%;
+        }
+        .lower-chard-box.second {
+            left: 17%;
+        }
+        .upper-chard-box.second {
+            left: 34%;
+        }
+        .lower-chard-box.third {
+            left: 50%;
+        }
+        .voting-will-be-opened{
+            left:8% !important;
+        }
+    }
+</style>
+    
+<div id="myTopBtn">Top</div>
+<section class="bg-ecobank sticky-top">
+    <div class="container ">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light py-3 ">
+            <a class="navbar-brand" href="#" id="img_logo_new">
+                <img src="https://s3-ap-southeast-1.amazonaws.com/uploads.judgify.me/uploads/136923/3e0a787d06a4cf196dcdf356836cd69b_1678075592003.png" class="nav-logo" alt="" style="width:120px;">
+            </a>
+            <h1 class="roboto-regular pl-2 pt-3 d-inline-block text-white event-title"> <b><< Site Name >></b></h1> 
+            <div class="pt-3" id="navbarNavAltMarkup" style="margin-left: auto;">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link mr-3 text-white active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" alt-value="">Home</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link mr-3 text-white" id="pills-judging-process-tab" data-bs-toggle="pill" data-bs-target="#pills-judging-process" role="tab" aria-controls="pills-judging-process" aria-selected="false" alt-value="judging-process">Judging</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link mr-3 text-white" id="pills-voting-tab" data-bs-toggle="pill" data-bs-target="#pills-voting" role="tab" aria-controls="pills-voting" aria-selected="false" alt-value="voting">Voting</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link mr-3 text-white" id="pills-faq-tab" data-bs-toggle="pill" data-bs-target="#pills-faq" role="tab" aria-controls="pills-faq" aria-selected="false" alt-value="faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+<div class="tab-content" id="pills-tabContent">
+<section>
+    <img id="img_event_banner" src="https://s3-ap-southeast-1.amazonaws.com/uploads.judgify.me/uploads/136923/104d1558f8f7d032bf5b1db9f5041706_1678075475389.jpg" alt="Ecobank" width="100%">
+    <div id="event_actions" class="p-3 pr-5">
+        <div class="left_entry_deadline d-inline-block">
+            <h3><b>Entries Deadline</b></h3>
+            <div class="deadline_text"><label class="roboto-regular" style="font-weight: 600;">30-Sep-2022 11:59 PM (GMT -0:00) </label></div>
+        </div>
+        <div class="d-inline-block justify-right" style="position: absolute;right:10px;text-align: right;">
+            <a href="#" id="event_submit_an_entry_btn" class="btn btn-primary rounded-0 p-2 px-4 " ><b> SUBMIT AN ENTRY</b></a> <br>
+            <label for="" class="roboto-regular not_logged_in_new" style="font-weight: 500;"><strong>Or click here to <a href="#" id="not_logged_new_user_btn" class="text-decoration-none">Register</a> </strong> </label>
+        </div>
+    </div>
+</section>
+
+<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+<section class="">
+    <div class="container py-3">
+        <div class="row py-3">
+            <div class="col-md-12 col-sm-12" data-aos="fade-down">
+                <label for="" class="roboto-light">About</label>
+                <h1 class="py-2 roboto-light"><< Site Name >></b></h1>
+                <p class="roboto-regular">The << Site Name >> is an internal competition open to all Ecobankers to propose innovative ideas that will help continuously improve customer experience and grow the business well into the future. The concept of the race was inspired by our RACEIT values: Respect, Accountability, Customer Centricity, Excellence, Integrity, Teamwork.</p>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12 col-sm-12" data-aos="fade-down">
+                <h1 class="py-2 roboto-light">Purpose</h1>
+                <p class="roboto-regular">The 2022 << Site Name >> is aligned to our Execution Momentum phase and to our Core Values, in particular Excellence, Customer Centricity and Teamwork. The purpose of this contest is to drive innovation from within the Bank by motivating Ecobankers to share their ideas and be given an opportunity to bring them to life. The ultimate aim of the contest is to implement the best idea(s) across the Ecobank Group.</p>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12 col-sm-12" data-aos="fade-down">
+                <h1 class="py-2 roboto-light">What ideas are we looking for?</h1>
+                <p class="roboto-regular">Ideas should align with our Execution Momentum objectives. The main themes are in line with the three priorities defined during our Business Leadership Conference (BLC):</p>
+                <ul class="f-18">
+                    <li>Winning in payments - increasing the payment wallet size</li>
+                    <li>Become customer centric by using technology to better serve our customers</li>
+                    <li>Increase revenue by driving the culture of salesmanship (strengthen the sales spirit amongst all Ecobankers)</li>
+                </ul>
+                <p class="roboto-regular">The overall objective is to drive innovation, foster teamwork and deliver exceptional solutions for our customers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-6 col-sm-12" data-aos="fade-down">
+                <h1 class="py-2 roboto-light">Competition roll out</h1>
+                <p class="roboto-regular">Anyone can submit her/his/their idea. From the entries our judges will select the 10 ﬁnalists (also called athletes).</p>
+                <p class="roboto-regular">If your idea is one of the ﬁnal 10, you will work with your team (the Bank will support you inbuilding your team if you don’t have one), to bring your project to life. </p>
+                <p class="roboto-regular">The teams will receive support in the initial incubation phase, including training on Design Thinking and mentors for support and to provide input. <b>All staff will be invited to vote on the top 10 projects. The projects will then be presented to a senior jury to select the winner of the 2022 Ecobank Innovation Award.</b> </p>
+            </div>
+            <div class="col-md-6 col-sm-12 show-race-css">
+                <!-- <img src="https://s3-ap-southeast-1.amazonaws.com/uploads.judgify.me/uploads/136923/894c16a597548a6b2f892cf63c1283be_1626923529918.png" alt="Ecobank Award" style="width: 100%;"> -->
+                <div class="stepper-card-box">
+                    <div class="stepper-line">
+                        <div class="lower-chard-box first">
+                            <div class="box arrow-top" style="background-color: #005B82;">
+                                Staff are invited to submit ideas with direct impact on the business (Increase payment Wallet, Increase profitability, using IT to better serve customers…).
+                            </div>
+                            <div class="up-line-caption"><label for="" class="roboto-light ">Ideation</label></div>
+                            <div class="rounded-bubble" style="background-color: #005B82;"></div>
+                        </div>
+                        <div class="upper-chard-box first">
+                            <div class="box arrow-bottom" style="background-color: #0082BB;">
+                                All entries are evaluated. Staff will vote to top 25, and a committee will select the top 10
+                            </div>
+                            <div class="down-line-caption"><label for="" class="roboto-light ">Selection</label></div>
+                            <div class="rounded-bubble" style="background-color: #0082BB;"></div>
+                        </div>
+                        <div class="lower-chard-box second">
+                            <div class="box arrow-top" style="background-color: red;">
+                                Olympians” bring ideas to live and work on an initial design during A Hackathon. They then come with a workable prototype in a 30 days sprint.
+                            </div>
+                            <div class="up-line-caption"><label for="" class="roboto-light ">Prototype</label></div>
+                            <div class="rounded-bubble" style="background-color: red;"></div>
+                        </div>
+                        <div class="upper-chard-box second">
+                            <div class="box arrow-bottom" style="background-color: orange;">
+                                Teams present prototype and demonstrate value to be generated to the senior leadership on a demo day .
+                            </div>
+                            <div class="down-line-caption" style="left: 45%;"><label for="" class="roboto-light ">Pitch</label></div>
+                            <div class="rounded-bubble" style="background-color: orange;"></div>
+                        </div>
+                        <div class="lower-chard-box third">
+                            <div class="box arrow-top" style="background-color: #3C8930;">
+                                Sponsored 
+                                projects will be considered for integration and commercialization.
+                            </div>
+                            <div class="up-line-caption"><label for="" class="roboto-light ">Integration</label></div>
+                            <div class="rounded-bubble" style="background-color: #3C8930;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12" data-aos="fade-down">
+                <h1 class="py-2 roboto-light">Timeline for the << Site Name >> 2021</h1>
+                <!-- <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p> -->
+                <div class="p-2 py-3 timeline">
+                    <ul class="f-18" style="list-style: none;">
+                        <li><b> 25<sup>th</sup>  July </b> – Opening Ceremony & start of the Heats (ﬁrst round)</li>
+                        <li><b>22<sup>nd</sup> September </b>– Deadline of Submissions; end of Heats</li>
+                        <li><b>4<sup>th</sup> October </b> – Announcement of the top 10 ﬁnalists (athletes) following Screening Committee’s vote</li>
+                        <li><b>4<sup>th</sup> October to 1<sup>st</sup> November</b> – Incubation phase to build prototypes.</li>
+                        <li><b>7<sup>th</sup> to 11<sup>th</sup> November </b> – Staff Vote</li>
+                        <!-- <li>27<sup>th</sup> October – Ultimate pitch</li> -->
+                        <li><b>15<sup>th</sup> November </b> – Ultimate pitch, Closing Ceremony & Announcement of winner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container py-5">
+        <div class="row py-3">
+            <div class="col-md-12 col-sm-12" data-aos="fade-down">
+                <label for="" class="roboto-light">SUBMISSION</label>
+                <h1 class="py-2 roboto-light">The submission criteria</h1>
+                <p class="roboto-regular">You must be an Ecobank Staff member - conﬁrmed, temporary, trainee from any Ecobank location ( Africa and International).</p>
+                <p  class="roboto-regular">You can submit your idea individually or as a team. Your idea should serve one of these three business priorities:</p>
+                <ul class="f-18">
+                    <li>Winning in payments - Increasing the payment wallet size</li>
+                    <li>Become customer centric by using technology to better serve our customers</li>
+                    <li>Increase revenue by driving the culture of salesmanship (strengthen the sales spirit amongst all Ecobankers)</li>
+                </ul>
+                <p>Your idea can be a product, a process etc.</p>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-4 col-sm-12">
+                <div class="card p-3" style="height:100%;">
+                    <div class="card-body">
+                        <div class="d-inline-block border p-3 fa-icon-section">
+                            <i class="fas fa-2x fa-bullhorn bullhorn"></i>
+                        </div>
+                        <h3 class="roboto-regular" style="margin-top:20px;">Phase 1</h3>
+                        <p class="roboto-regular">
+                            For the first phase, your idea will be
+                            assessed as follow:</p>
+                        <ol class="f-18">
+                            <li>Innovation</li>
+                            <li>User Experience</li>
+                            <li>Business Opportunity</li>
+                            <li>Scalability</li>
+                            <li>Wow Effect</li>
+                        </ol>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <div class="card p-3" style="height:100%;">
+                    <div class="card-body">
+                        <div class="d-inline-block border p-3 fa-icon-section">
+                            <i class="fas fa-2x fa-store store"></i>
+                        </div>
+                        <br/>
+                        <h3 class="roboto-regular" style="margin-top:20px;">Winning ideas</h3>
+							<p class="roboto-regular">The winning ideas amongst the top 10 finalists will be selected based on the following criteria:</p>
+                            <ol class="f-18">
+                                <li> The market size – How to assess the potential size of the market opportunity for this solution?</li>
+                                <li>The market relevance – How relevant is the solution to pain points within the African context?</li>
+                                <li> The scalability – How scalable is the product for multiple markets?</li>
+                                <li>The Potential revenue – How big is the potential revenue?</li>
+                                <li> The Business Model – How do we rate the viability and sustainability of the business model?</li>
+                            </ol>                            
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <h1 class="py-2 roboto-regular">Prizes</h1>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 first shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-primary text-center"><strong>1st</strong></h1>
+                    <label class="roboto-light" for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A Gold Medal with a cash prize worth 5,000 USD. There will also be a meet and greet with Ecobank’s Group Chief Executive Officer as well as a special guest invitation to join the 2022 Business Leadership Conference (BLC).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 second shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-success text-center"><strong>2nd</strong></h1>
+                    <label class="roboto-light" for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A silver medal with a Cash prize worth 3,000 USD
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 third shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-danger text-center"><strong>3rd</strong></h1>
+                    <label class="roboto-light " for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A bronze medal with a Cash prize worth 2,000 USD
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12 ">
+                <h1 class="py-2 roboto-regular">Copyright</h1>
+                <p>Ecobank would own the copyright but you will be recognized for the innovation. By accepting to participate in the challenge, you will need to accept any other applicable conditions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<div class="tab-pane fade show" id="pills-judging-process" role="tabpanel" aria-labelledby="pills-judging-process-tab">
+    <div class="container" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12 pt-5">
+                <h1 id="JudgingProcess" class="roboto-light">Judging Process</h1>
+                <p class="roboto-regular">There will be two rounds of Heats:</p>
+                <p class="roboto-regular">During the ﬁrst round, an Innovation working committee will select the top 10 ideas.</p>
+                <p class="roboto-regular">
+                    The top 10 ﬁnalists (athletes) will pitch their idea in front of the Pitching Committee and only this committee will select the ﬁnal three winners.
+                </p>
+                <p>
+                    The Top three winners (athletes) will be selected based on the following
+                </p>
+                <ul class="f-18">
+                    <li>40% based on votes of Ecobankers</li>
+                    <li>60% based on votes of the judges</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <h1 class="py-2 roboto-regular">Prizes to be won</h1>
+                <p>All the winners will also get access to development Programmes. The Champion, runner-up and third place winners will receive the following prizes:</p>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 first shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-primary"><strong>1st</strong></h1>
+                    <label class="roboto-light text-center" for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A Gold Medal with a cash prize worth 5,000 USD. There will also be a meet and greet with Ecobank’s Group Chief Executive Officer as well as a special guest invitation to join the 2022 Business Leadership Conference (BLC).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 second shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-success"><strong>2nd</strong></h1>
+                    <label class="roboto-light text-center" for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A silver medal with a Cash prize worth 3,000 USD
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 pt-3">
+                <div class="position-card pt-5 p-2 third shadow text-center">
+                    <h3 class="pb-3 pt-2 roboto-regular text-center">Position</h3>
+                    <h1 class="pb-0 roboto-regular text-danger"><strong>3rd</strong></h1>
+                    <label class="roboto-light text-center" for="">Prize</label>
+                    <div class="text-center p-5">
+                        <p class="roboto-light justify-content-center">
+                            A bronze medal with a Cash prize worth 2,000 USD
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 pt-5">
+                <h1 id="JudgingProcess" class="roboto-light">Critical Success Factor</h1>
+                <p class="roboto-regular">We will evaluate the idea based on its transformation capacity to achieve the stated objectives. We will assess your ability along with your team to bring your idea to life.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 pt-5">
+                <h1 id="JudgingProcess" class="roboto-light">Who are the Judges</h1>
+                <p class="roboto-regular">The Judges will be announced in due course.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-pane fade show" id="pills-voting" role="tabpanel" aria-labelledby="pills-voting-tab">
+    <div class="container pb-4" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 py-5">
+                <h1 class="roboto-light">Voting</h1>
+                 <p class="roboto-regular">You will be able to vote here as soon as voting opens to. All Ecobankers will be able to vote for their favourite ideas.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 pb-5">
+                <div class="image-over-text" style="position:relative">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/uploads.judgify.me/uploads/136923/7d81adb3e957e58af7e2e6c747f1c27c_1626273370015.PNG" width="100%" style="border-radius: 30px;height:400px;" alt="">
+                    <div class="text-white text-center voting-will-be-opened" style="position:absolute;top:40%;left:35%;">
+                        <h2 class="roboto text-white">Voting will be opened soon</h2>
+                        <p class="roboto">Look out for the communication to be shared via email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-pane fade show" id="pills-faq" role="tabpanel" aria-labelledby="pills-faq-tab">
+<section>
+    <div class="container pt-3 pb-4" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 py-5">
+                <h1 class="py-4 text-center"> <strong><< Site Name >> 2022 </strong> <br> <strong>Q&A</strong> </h1>
+                <h2 class="roboto-light py-3"><b class="roboto" style="font-size: 40px;">INTRODUCING THE 2022 << Site Name >></b></h2>
+                <br>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;">1. What is the << Site Name >>? </h3>
+                    <p class="roboto-regular">The << Site Name >> is an internal competition open to all Ecobankers to propose innovative ideas that will help continuously improve customer experience and grow the business well into the future. The concept of the race was inspired by our RACEIT values: Respect, Accountability, Customer Centricity, Excellence, Integrity, Teamwork.</p>
+                 </div>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;">2. What’s the purpose of the << Site Name >>?</h3>
+                    <p class="roboto-regular">The 2022 << Site Name >> is aligned to our Execution Momentum phase and to our  Core Values, in particular Excellence, Customer Centricity and Teamwork. The purpose of  this contest is to drive innovation from within the Bank by motivating Ecobankers to share  their ideas and be given an opportunity to bring them to life. The ultimate aim of the  contest is to implement the best idea(s) across the Ecobank Group.</p>
+                 </div>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;"> 3. What type of ideas qualify for the << Site Name >>?</h3>
+                    <p class="roboto-regular">Ideas should align with our Execution Momentum objectives. The main themes are in line  with the three priorities defined during our Business Leadership Conference (BLC):
+                    <ul class="f-18">
+                        <li>Winning in payment increasing the payment wallet size</li>
+                        <li>Become customer centric by using technology to better serve our customers</li>
+                        <li>Increase revenue by driving the culture of salesmanship (strengthen the sales spirit amongst all Ecobankers)</li>
+                    </ul>
+                    The overall objective is to drive innovation, foster teamwork and deliver exceptional solutions for our customers.
+                    </p>
+                 </div>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;">4. Does this mean there are different categories?</h3>
+                    <p class="roboto-regular">No. When you submit your idea it should cover any one or more of the above-mentioned  themes. All ideas will be evaluated based on their potential impact for the business. </p>
+                 </div>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;">5. How will the competition be rolled out?</h3>
+                    <p class="roboto-regular">Anyone can submit her/his/their idea. From the entries our judges will select the 10 finalists  (also called athletes). If your idea is one of the final 10, you will work with your team (the  Bank will support you in building your team if you don’t have one), to bring your project to  life. The teams will receive support in the incubation phase, including training on design  thinking and mentors for support and input. <b>All staff will be invited to vote on the top 10  projects. The projects will then be presented to a senior jury to select the winner of the  2022 << Site Name >>.</b>
+                    </p>
+                 </div>
+                 <div class="general-list">
+                    <h3 class="roboto" style="font-size: 24px;">6. What is the timeline for the << Site Name >> 2022? </h3>
+                    <p class="roboto-regular">
+                        25 <sup>th</sup> August – Opening Ceremony & start of the Heats (first round)<br>
+                        22 <sup>nd</sup> September – Deadline of Submissions; end of Heats <br>
+                        4<sup>th</sup> October– Announcement of the top 10 finalists (athletes) following the Screening  Committee’s vote <br>
+                        4<sup>th</sup> October to 1<sup>st</sup> November – Incubation phase to build prototypes <br>
+                        7<sup>th</sup> to 11<sup>th</sup> November – Staff Vote <br>
+                        15<sup>th</sup> November – Ultimate pitch, Closing Ceremony and Announcement of winners
+                    </p>
+                    <!-- <div class="py-2">
+                        <img src="https://s3.ap-southeast-1.amazonaws.com/public.judgify.me/events_2021/8615/10655_GRP_INNOVATIONS-OLYMPICS_Timeline_A4_L_EN_V5_HR.png" width="100%" alt="Eco bank | Timeline">
+                    </div> -->
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section  class="bg-light">
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12 pt-3">
+                <h1><b><label class="roboto-regular" style="font-size: 40px;">SUBMISSION CRITERIA</label></b> </h1><br>
+                <div class="submission-criteria">
+                    <h3 class="roboto" style="font-size: 24px;">7. What are the submission criteria?</h3>
+                    <p class="roboto-regular">You must be an Ecobank Staff member - confirmed, temporary, contract or a trainee from  any Ecobank location (Africa and International).</p>
+                    <p>
+                        You can submit your idea individually or as a team. Your idea should serve one of these  three business priorities: 
+                    </p>
+                    <ul class="f-18">
+                        <li>Winning in payments - increasing the payment wallet size</li>
+                        <li>Become customer centric by using technology to better serve our customers</li>
+                        <li>Increase revenue by driving the culture of salesmanship (strengthen the sales spirit  amongst all Ecobankers)</li>
+                    </ul>
+                    <p>Your idea can be a product, a process etc. </p><br>
+                    <p class="roboto-regular mt-2">In the first phase, your idea will be assessed as follows::</p>
+                    <ol class="f-18" list-style="number">
+                        <li>Innovation</li>
+                        <li>User Experience</li>
+                        <li>Business Opportunity</li>
+                        <li>Scalability</li>
+                        <li>Wow Effect</li>
+                    </ol>
+                    <p class="roboto-regular">The winning ideas amongst the top 10 finalists will be selected based on the following  criteria: </p>
+                    <div class="submission-criteria-list">
+                        <ol>
+                            <li><p>The market size <br>
+                                    <i>How to assess the potential size of the market opportunity for this solution?</i>
+                                </p>
+                            </li>
+                            <li><p>The market relevance<br>
+                                    <i>How relevant is the solution to pain points within the African and Ecobank context?</i>
+                                </p>
+                            </li>
+                            <li><p>The scalability<br>
+                                    <i>How scalable is the product for multiple markets? </i>
+                                </p>
+                            </li>
+                            <li><p>The potential revenue<br>
+                                    <i>How big is the potential revenue</i>
+                                </p>
+                            </li>
+                            <li><p>The Business Model<br>
+                                    <i>How do we rate the viability and sustainability of the business model?</i>
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="submission-criteria">
+                    <h3 class="roboto" style="font-size: 24px;">8. I have an idea but it isn’t digital. Should I still submit it?</h3>
+                    <p>
+                        You can submit any type of idea(s), although the preference is for ideas that are about digital innovation.
+                    </p>
+                </div>
+                <div class="submission-criteria">
+                    <h3 class="roboto" style="font-size: 24px;">10. Can I team up with colleagues outside of my affiliate? </h3>
+                    <p>
+                        Yes, though individual submissions are allowed, we also encourage Teamwork. You can  team up with Ecobankers within and outside of your affiliate up to a maximum of nine people per team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><b><label class="roboto-regular" style="font-size: 40px;">SUBMITTING YOUR ENTRY</label></b></h1><br>
+                <div class="sumitting-your-entry">
+                    <h3 class="roboto" style="font-size: 24px;">11. I have a great idea. What should I do?</h3>
+                    <p class="roboto-regular">
+                        Visit the << Site Name >> Hub at << org_email_address >> - set up especially for  the 2022 << Site Name >>. Here you will find all the information about the  competition, including the criteria, deadlines and details on the voting process. You can also  submit your idea here.</p>
+                </div>
+                <div class="sumitting-your-entry">
+                    <h3 class="roboto" style="font-size: 24px;">12. What do I need to enter?</h3>
+                    <p class="roboto-regular">
+                        Just your idea! You can apply as an individual or as a team. You will be asked a number of  questions to help us understand your idea. You can also submit supporting documents through << org_email_address >>. Once your idea is selected, you will be provided with  the tools required. You will also need to have the right team, of a minimum of three people  and a maximum of nine, to help you create a model/prototype.</p>
+                </div>
+                <div class="sumitting-your-entry">
+                    <h3 class="roboto" style="font-size: 24px;">13. Can I only submit one idea?</h3>
+                    <p class="roboto-regular">
+                        No. There are no restrictions to the number of ideas you’re submitting, be it products or  process changes. The main thing is that your idea(s) should serve the three business  priorities.</p>
+                </div>
+                <div class="sumitting-your-entry">
+                    <h3 class="roboto" style="font-size: 24px;">14. What is the deadline for submitting my idea?</h3>
+                    <p class="roboto-regular">
+                        Submissions should be received by Thursday, 22nd September 2022. Details, including the  criteria and project timetable, are available on the ‘<< Site Name >> Hub’ webpage  at <a href="http://<< org_email_address >>" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark"><< org_email_address >></a> . </p> 
+                </div>
+                <div class="sumitting-your-entry">
+                    <h3 class="roboto" style="font-size: 24px;">15. What is happening with the winning projects of the 2021 Ecobank Innovation  Race?</h3>
+                    <p class="roboto-regular">
+                        The 2021 Innovation Race received 114 entries which, after difficult consideration, produced 10 finalists and then the eventual top three winners. Development of their ideas is  still ongoing, and we are eagerly looking forward to their implementation and impact. </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light">
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><b><label class="roboto-regular" style="font-size: 40px;">COMPETITION PHASES</label></b></h1><br>
+                <div class="competition-phases">
+                    <h3 class="roboto" style="font-size: 24px;">16. How long will the << Site Name >> run for? </h3>
+                    <p class="roboto-regular">
+                        After the official opening ceremony, the Heats will commence. You will have until 22<sup>nd</sup> September to submit your ideas. The top 10 athletes (finalists) will be announced on 4<sup>th</sup> October and will have 29 days to work on a prototype. Then the pitch will be held in November. The winners will be announced during the Official Closing Ceremony, planned  for 15<sup>th</sup> November. 
+                    </p>
+                </div>
+                <div class="competition-phases">
+                    <h3 class="roboto" style="font-size: 24px;">17. How long will I have to develop my idea after I place my entry? </h3>
+                    <p class="roboto-regular">
+                        You will have 29 days to develop your idea and create a model/prototype with your team.  Then you will be invited to pitch your model/prototype in front of the judges. The ultimate winner, second and third places will then be chosen. </p>
+                </div>
+                <div class="competition-phases">
+                    <h3 class="roboto" style="font-size: 24px;">18. If I’m a finalist, will I be expected to develop the idea with my team solely in my  own time?</h3>
+                    <p class="roboto-regular">The 10 athletes (finalists) and their teams will be able to work in their free time to develop a  prototype that they will present to the jury. They will receive support from a senior advisor  who will guide them. </p>
+                </div>
+                <div class="competition-phases">
+                    <h3 class="roboto" style="font-size: 24px;">19. Will I have to supply any equipment or resources myself for my idea development? </h3>
+                    <p class="roboto-regular">Your idea and your ability to bring it to life are your most important assets for this  competition. We will provide you with the required support. </p>
+                </div>
+                <div class="competition-phases">
+                    <h3 class="roboto" style="font-size: 24px;">20. How can we follow the different phases of the << Site Name >>?</h3>
+                    <p class="roboto-regular">You will find all details of the competition on the <a href="http://<< org_email_address >>" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark"> << Site Name >> Hub  (<< org_email_address >>)</a> and on a dedicated Yammer Page ‘<< Site Name >>’. So, make a point of visiting these pages regularly! </p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="">
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><b><label class="roboto-regular" style="font-size: 40px;">JUDGING</label></b></h1><br>
+                <div class="judging-faq">
+                    <h3 class="roboto" style="font-size: 24px;">21. How will the competition be judged?</h3>
+                    <p class="roboto-regular">Two Rounds of Heats: <br>
+                        During the first round, an Innovation working committee will select the top 10 ideas. <br>
+                        The top 10 finalists (athletes) will pitch their idea in front of the Pitching Committee and  only this committee will select the final three winners. <br>
+                        The Top three winners (athletes) will be selected based on the following 
+                        <ul class="f-18 pb-3">
+                            <li>40% based on votes of Ecobankers</li>
+                            <li>60% based on votes of the judges</li>
+                        </ul>
+                        Ecobankers will cast their vote at << org_email_address >> once the voting opens.
+                    </p>
+                </div>
+                <div class="judging-faq">
+                    <h3 class="roboto" style="font-size: 24px;">22. How will Ecobankers be able to cast votes? </h3>
+                    <p class="roboto-regular">You will be requested to visit the << Site Name >> Hub. As soon as voting opens to  all Ecobankers, entrants will submit their ideas, can share a link or summary of their ideas  and their pictures (in addition but not mandatory) and will start doing the necessary advertisement. All Ecobankers will be able to vote for their favourite ideas directly from the  << Site Name >> Hub. 
+                    </p>
+                </div>
+                <div class="judging-faq">
+                    <h3 class="roboto" style="font-size: 24px;">23. What are the critical factors? How will success be measured?</h3>
+                    <p class="roboto-regular">We will evaluate each idea based on its transformation capacity to achieve the stated  objectives. We will assess the ability of each entrant along with their team (where  applicable) to bring their idea to life.</p>
+                </div>
+                <div class="judging-faq">
+                    <h3 class="roboto" style="font-size: 24px;">24. Who are the Judges?</h3>
+                    <p class="roboto-regular">The judges will be announced in due course.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light">
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><b><label class="roboto-regular" style="font-size: 40px;">PRIZES TO WIN</label></b></h1><br>
+                <div class="prizes-to-win">
+                    <h3 class="roboto" style="font-size: 24px;">25. What are the prizes to be won?</h3>
+                    <p class="roboto-regular">The Champion will receive The Ecobank Innovator of the Year Award from the GCEO, a Gold  Medal and a Cash prize worth 5,000 USD. There will also be a meet and greet with  Ecobank’s Group Chief Executive Officer as well as a special guest invitation to join the 2022  Business Leadership Conference (BLC).</p>
+                    <p class="roboto-regular">The runner-up will receive the silver medal and a Cash prize worth 3,000 USD.</p>
+                    <p class="roboto-regular">Third place will receive a bronze medal and a Cash prize worth 2,000 USD.</p>
+                    <p class="roboto-regular">All the winners will also get access to Development Programmes.</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section >
+    <div class="container pt-3" data-aos="fade-down">
+        <div class="row">
+            <div class="col-md-12">
+            <h1><b><label class="roboto-regular" style="font-size: 40px;">COPYRIGHT</label></b> </h1><br>
+            <div class="copyright">
+                <h3 class="roboto" style="font-size: 24px;">26. Could the winning entry/entries be commercialised?</h3>
+                <p class="roboto-regular">Yes, once the top three have been selected, sponsored projects will be considered for  integration.</p>
+            </div>
+            <div class="copyright">
+                <h3 class="roboto" style="font-size: 24px;">27. Who will hold the copyright of the proposed innovative idea?</h3>
+                <p class="roboto-regular">Ecobank will own the copyright but you will be recognized for the innovation. By accepting  to participate in the race, you will need to accept all other applicable conditions. </p><br>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <div class="py-4">
+                <p class="roboto-regular">For more information or clarification, contact us: <a href="mailto:<< org_email_address >>" class="text-decoration-none" style="color:#1d415e;"> << org_email_address >></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="p-3" style="background-color: #2B5C83;height:150px;margin-bottom: -40px;">
+
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myTopBtn").style.display = "block";
+            } else {
+                document.getElementById("myTopBtn").style.display = "none";
+            }
+        }
+        function lastPart() {
+            var url = window.location.pathname;
+            var parts = url.split("/");
+            var last_part = parts[parts.length-1];
+            return last_part;
+        }
+        function navMenuActive(menuID,contentID) {
+            $('.nav-link').removeClass('active');
+            menuID.addClass("active");
+            if(contentID!=null){
+                $('.tab-pane').removeClass('active show');
+                contentID.addClass("active show");
+            }
+            
+        }
+        function ChangeUrl(title, url) {
+            try {
+                if (typeof (history.pushState) != "undefined") {
+                    var obj = { Title: title, Url: url };
+                    history.pushState(obj, obj.Title, obj.Url);
+                } else {
+                    alert("Browser does not has specific Object ( Title , Url ).");
+                }
+            } catch (error) {
+                console.warn("Error in Push State : ",error);
+                alert("Browser does not support HTML5.");
+            }
+           
+        }
+        $(document).ready(function(){
+            $('#myTopBtn').click(function(){
+                topFunction();
+            });
+            
+        AOS.init({	duration: 1200});
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        
+            var link = $("#entrant-topbar-right1 .btn-success").attr("href");
+            $("#event_submit_an_entry_btn ").attr("href", link ); 
+            try {
+               
+                var deadline=$('#entrant-topbar-left1 p').last().html();
+                var month=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                var deadDate=new Date(deadline).toString().split(' ');
+                var getYear=new Date(deadline).getFullYear();
+                var getMonth=new Date(deadline).getMonth();
+                var getDay=new Date(deadline).getDate();
+                var newDeadLine=getDay+"-"+month[getMonth]+"-"+getYear;
+                $('.deadline_text label').html(deadline);
+            } catch (error) {
+               console.warn("Date Error:",error); 
+            }
+            
+            if($('.not_logged_in').length && $('.not_logged_in strong a').length){
+                var link_href_new_user=$('.not_logged_in strong a').attr('href');
+                $('#not_logged_new_user_btn').attr('href',link_href_new_user);
+            }else{
+                $('.not_logged_in_new').hide();
+            }
+            
+            if($('#event_banner img').length){
+                var banner_src=$('#event_banner img').attr('src');
+                $('#img_event_banner').attr('src',banner_src);
+            }
+            // Menu Click Action
+            var last_part = lastPart();
+            if(last_part!=undefined && last_part=="judging-process"){
+                navMenuActive($('#pills-judging-process-tab'),$('#pills-judging-process'));
+            }
+            else if(last_part!=undefined && last_part=="voting"){
+                navMenuActive($('#pills-voting-tab'),$('#pills-voting'));
+            }
+            else if(last_part!=undefined && last_part=="faq"){
+                navMenuActive($('#pills-faq-tab'),$('#pills-faq'));
+            }
+            else {
+                navMenuActive($('#pills-home-tab'),$('#pills-home'));
+            }
+            $('.nav-link').click(function(){
+                navMenuActive($(this),null);
+                var first = $(location).attr('pathname');
+                first.indexOf(1);
+                first.toLowerCase();
+                first = first.split("/")[1];
+                ChangeUrl("Ecobank Innovation Race","/"+first+"/"+$(this).attr("alt-value")+location.search);
+            });
+            // End Menu Click Action
+        });
+        try {
+            // var linkNode = document.querySelector('link[href*="bootstrap.min.css"]');
+            // var ACElinkNode = document.querySelector('link[href*="ace.min.css"]');
+            // linkNode.parentNode.removeChild(linkNode);
+            // ACElinkNode.parentNode.removeChild(ACElinkNode);
+        } catch (error) {
+            console.warn("Error:",error);
+        }
+        function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+</script>
