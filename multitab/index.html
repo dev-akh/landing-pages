@@ -1,0 +1,2769 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="./index.css"> -->
+<style>
+.text-success{
+	color: #f1592e !important
+}
+.qode_video_box {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    max-width: 100%;
+}
+.qode_video_box .qode_video_image {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.qode_video_box .qode_video_image .qode_video_box_button_holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    z-index: 44;
+}
+.qode_video_box .qode_video_image .qode_video_box_button {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: background-color .15s ease-out;
+    -webkit-transition: background-color .15s ease-out;
+}
+.qode_video_box .qode_video_image .qode_video_box_button_arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-50%);
+    -webkit-transform: translate(-48%,-50%);
+    border-top: 12px solid transparent;
+    border-left: 18px solid #303030;
+    border-bottom: 12px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mu-video-content {
+    display: inline;
+    float: left;
+    width: 100%;
+
+}
+.mu-video-iframe-display {
+    display: block;
+}
+.mu-video-iframe-area {
+    background-color: rgba(0,0,0,0.84);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12% 0;
+    text-align: center;
+    z-index: 9999;
+    display: none;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.mu-video-close-btn {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    display: inline-block;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 100px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 50px;
+}
+    #entrant-topbar-container, #event_banner,#entrant-topbar-container1{
+        position:absolute;
+        top:-30000px;
+    }
+
+    #entrant-footer {display:none !important; }
+    #main-container,#main-content,#page-content{width:100% !important;margin:0px !important;padding:0px !important;}
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    
+    *,.roboto{
+        font-family: 'Roboto', sans-serif;
+    }
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 52px;
+        right: 31px;
+        z-index: 9999;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #00a6a6;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        border-radius: 45px;
+    }
+    
+    #myBtn:hover {
+        background-color: #f1592e;
+    }
+    .btn-register-menu{
+        background:#d8a948 !important;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        color:black !important;
+    }
+    .btn-register-menu:hover,.btn-register-menu:focus{
+        background:#1C1463 !important;
+        color:white !important;
+    }
+    .banner-meinnovation{
+        background-image: url(./../images/banner.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;       
+        position: relative;
+		background-size: 100% 100%;
+    }
+    .page-menu-items.mr-3{
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color:#ffffff !important;
+    }
+    .color-gold{
+        color:#d8a948 !important;
+    }
+    .bg-gold{
+        background-color:#1abc9c;
+		color: #fff !important;
+    }
+	 .bg-orange{
+        background-color:#f1592e !important;
+		color: #fff !important;
+    }
+    .bg-meinnovation{
+        background-color: rgba(9, 36, 47, .9) !important;
+    }
+    .bg-meinnovation.scroll{
+        background-color: rgba(9, 36, 47, 1) !important;
+    }
+    .bg-meinnovation.fixed-top.hide{
+        display: none !important;
+    }
+    
+    .banner-overlay-text>#banner-overlay-text-change{
+        /* color: #191919ba; */
+        color:white;
+        font-size: 26px;
+    }
+    .banner-overlay-text{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        transform: translateY(43%);
+    }
+    .w-12 {
+        width: 12%;
+    }
+    .w-30{
+        width:30%;
+    }
+    .w-35{
+        width: 35% !important;
+    }
+    .due-date-display{
+        font-weight: 900;
+        font-size: 35px;
+    }
+    .bg-meinnovation-style{
+        padding-top: 40% !important;
+        height:100%;
+         /* background-color: transparent;
+        background-image: linear-gradient(
+        180deg, #D41459 0%, #1C1463 100%); 
+        background-image: linear-gradient( 
+180deg, #ecebedc7 30%, #ddad4bab 70%);
+    opacity: 0.3;*/
+    /* opacity: 0.6; */
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-expand-lg{
+        justify-content: space-between;
+    }
+    /* .navbar-nav {
+        flex-direction: row !important;
+    } */
+    .nav-link {
+        cursor: pointer;
+    }
+    .banner-shape{
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        direction: ltr;
+    }
+    .banner-shape-bottom{
+        bottom: -1px;
+        transform: rotate(
+        180deg);        
+    }
+    .banner-shape-fill{
+        fill: #fff;
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotateY(
+        0deg);
+        transform: rotateY(
+        0deg);
+    }
+    .text-color{
+        color:#000000;
+    }
+    .page-menu-items.active {
+    color: #f1592e !important;
+    font-size: 18px !important;
+}
+    .group-video-section{
+        background-image: url(./../images/meeting-gp.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: relative;
+    }
+    .group-video-section>.custom-embed-play>.icon-play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        cursor: pointer;
+    }
+    .bg-home-issue-section{
+        background:#1C1463 ;
+    }
+    .issue-inner-section{
+        position: relative;
+    }
+    .issue-inner-download{
+        background-color: #d41459;
+        color: #fff;
+        fill: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 1;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        text-align: center;
+        padding:20px;
+        position: absolute;
+        top:7%;
+        right:7%;
+    }
+    .f-40{
+        font-size: 40px;
+    }
+    .rounded-0.border.text-center.p-4.judge-panel:hover {
+    transform: scale(1.05);
+    transition: 3s;
+    z-index: 9999;
+    background: lightblue;
+}
+    .footer{
+        background:#09242f!important;
+    }
+    .social-icons-section>a{
+        font-size: 25px;
+    }
+    .social-icons-section>a:hover{
+        color:  #d41459 !important;    
+    }
+    .bg-dark-blue{
+        background:#1C1463;
+    }
+    .home-card-second{
+        background-image: url(./../images/bg-lines-shade.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .home-card-second:hover{
+        -webkit-animation: zoom-a 5s linear infinite alternate; /* Safari 4+ */
+        -moz-animation:    zoom-a 5s linear infinite alternate; /* Fx 5+ */
+        -o-animation:      zoom-a 5s linear infinite alternate; /* Opera 12+ */
+        animation:         zoom-a 5s linear infinite alternate; /* IE 10+, Fx 29+ */
+    }
+    @-webkit-keyframes zoom-a {
+        0% { background-size: 100% auto; }
+        100% { background-size: 120% auto; }
+    }
+    @-moz-keyframes zoom-a {
+        0% { background-size: 100% auto; }
+        100% { background-size: 120% auto; }
+    }
+    @-o-keyframes zoom-a {
+        0% { background-size: 100% auto; }
+        100% { background-size: 120% auto; }
+    }
+    @keyframes zoom-a {
+        0% { background-size: 100% auto; }
+        100% { background-size: 120% auto; }
+    }
+    
+    .home-card-second>div{
+        background-color:#0000003f;
+    }
+    .home-card-section{
+       position:relative;
+	   z-index:99;
+    }
+    .home-card-header{
+        font-weight: 800;
+    }
+    .issue-inner-section>img{
+        width: 100%;
+        height: 774px;
+    }
+    .winner-tabs>.nav-link {
+        color: #000 !important;
+    }
+    .winner-tabs>.nav-link.active{
+        color:  #1abc9c !important;
+        border-left: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .winner-tabs{
+        width:445px;
+    }
+    #v-pills-tabContent{
+        width: 130%;
+    }
+    .header-font-weight{
+        font-weight: 800;
+    }
+    .subheader-font{
+        color:#1C1463;
+    }
+    .contact-address{
+        font-size: 18px;
+        font-weight: 600;
+        color:#424141;
+    }
+    .video-player{
+        position: fixed;
+        top:0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background:grey;
+        text-align: center;
+        vertical-align: middle;
+        padding:5%;
+    }
+    .video-player.hide{
+        display: none;
+    }
+    #close-video-player{
+        position: absolute;
+        top: 5%;
+        right: 3%;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .winners-card>div{
+        height: 100%;
+    }
+    .guideline-header {
+        font-weight: 800;
+        font-size: 40px;
+    }
+    .guidelines-award-list>li{
+        display: none;
+        padding-bottom: 17px;
+    }
+    .guideline-award-categories:hover{
+        transition: .5s transform cubic-bezier(.155,1.105,.295,1.12),.5s box-shadow,.5s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    }
+    .guideline-award-categories:hover{
+        box-shadow: 0 5px 10px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        transform: scale(1.02);
+    }
+    .guideline-pdf-download>b{
+        font-size: 24px;
+    }
+    .guideline-award-categories>div.p-3{
+        display: none;
+    }
+    .guideline-pdf-download{
+        -webkit-animation: grow-animation 2s linear infinite alternate; /* Safari 4+ */
+        -moz-animation:    grow-animation 2s linear infinite alternate; /* Fx 5+ */
+        -o-animation:      grow-animation 2s linear infinite alternate; /* Opera 12+ */
+        animation:         grow-animation 2s linear infinite alternate; /* IE 10+, Fx 29+ */
+    }
+    @-webkit-keyframes grow-animation {
+        0% { transform: scale(1.1); }
+        50% {transform: scale(1.3); }
+        100% {transform: scale(1.1); }
+    }
+    @-moz-keyframes grow-animation {
+        0% { transform: scale(1.1); }
+        50% {transform: scale(1.3); }
+        100% {transform: scale(1.1); }
+    }
+    @-o-keyframes grow-animation {
+        0% { transform: scale(1.1); }
+        50% {transform: scale(1.3); }
+        100% {transform: scale(1.1); }
+    }
+    @keyframes grow-animation {
+        0% { transform: scale(1.1); }
+        50% {transform: scale(1.3); }
+        100% {transform: scale(1.1); }
+    }
+    @media (min-width:790px) and (max-width: 1368px){
+        .nav-logo.w-25{
+            width: 18% !important;
+        }
+        .navbar-collapse.collapse.show>ul>li.nav-item , .navbar-collapse.collapsing>ul>li.nav-item{
+            background: #ffffffc9;
+            border: 1px solid !important;
+        }
+    }
+    
+    @media (max-width: 792px){
+        .banner-overlay-text>#banner-overlay-text-change{
+            font-size: 19px !important;
+        }
+        .navbar-collapse.collapse.show>ul>li.nav-item , .navbar-collapse.collapsing>ul>li.nav-item{
+            background: #ffffffc9;
+            border: 1px solid !important;
+        }
+        .nav-logo.w-25{
+            width:17% !important;
+            float: left !important;
+        }
+        .bg-meinnovation {
+            /* margin-top: -2% ; */
+        }
+        .bg-meinnovation-style {
+            /* margin-top: -10%;
+            padding-top: 60% !important; */
+        }
+        .fixed-background-image{
+            opacity: 0.14;
+        }
+        .banner-meinnovation {
+            position: relative;
+        }
+        .page-menu-items{
+            font-size: 13px !important;
+        }
+        .home-card-section {
+            margin-top: 0% !important;
+        }
+        .home-card.border-end{
+            border-right: none !important;
+            border-bottom: 1px solid #dee2e6!important;
+        }
+        .home-card.border-start{
+            border-left: none !important;
+            border-top: 1px solid #dee2e6!important;
+        }
+        #v-pills-tabContent {
+            width: 225% !important;
+        }
+        .issue-inner-section>img {
+            height: auto !important;
+        }
+        .due-date-display{
+            font-size: 20px !important;
+        }
+        .home-card-header {
+            font-size: 22px !important;
+        }
+        .home-card strong{
+            font-size: 20px !important;
+        }
+        .mb-card{
+            font-size: 10px !important;
+            padding: 0.3rem !important;
+        }
+        .mb-card-winner-text , .mb-card-image{
+            padding: 0.3rem 0.7rem !important;
+        }
+        .mb-card-bank , .mb-card-tabs{
+            font-size: 12px !important;
+        }
+        .navbar-expand-lg.navbar-light.pt-4{
+            padding-top:0.5rem !important;
+        }
+        .home-card-second>div{
+            padding-top:1rem !important;
+            padding-bottom:1rem !important;
+        }
+        /* .tab-conent-section{
+            padding-top: 50% !important;
+        } */
+        .main-tab-pane {
+            margin-top: 0% !important;
+        }
+        #close-video-player{
+        top: 0%;
+        }
+        .fixed-background-image-bottom{
+            display: none;
+        }
+        button#pills-register-tab{
+            display: inline-block;
+        }
+    }
+	.navbar-expand-lg .navbar-nav li{
+		text-transform: uppercase;
+	}
+	.navbar-expand-lg .navbar-collapse{
+		justify-content: right;
+	}
+	.deadline-meinnovation{
+		background: #ee3924 url(./../images/shards.svg) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;		
+		position: relative;
+    }
+	.deadline-meinnovation .deadline-announce{
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 76px;
+   }
+   .deadline-meinnovation .deadline-announce-txt{		
+		background-color: #ee3924 !important;		
+   }
+   .fixed-background-image{
+		background: url(./../images/new-shards-right.svg) !important;
+		width: 338px;
+		height: 1032px;
+		position: absolute !important;
+		z-index: 0;
+		top: 0%;
+		right: 1%;
+        opacity: 0.3;
+   }
+    .fixed-background-image2{
+		background-image: url(./../images/bg-fixed-1920.jpg) !important;
+		overflow:auto;
+		height: auto;
+		background-size: cover;
+		background-position: center 0px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+    .fixed-background-image3{
+		background-image: url(./../images/new-shards-right.svg) !important;
+		background-size: 300px !important;
+		background-position: right 0px;		
+		background-repeat: no-repeat !important;
+		background-attachment: fixed !important;
+		height: auto;
+		overflow: auto;		
+
+	}
+   .fixed-background-image-bottom{
+		background: url(./../images/new-shards-left.svg) !important;
+		width: 198px;
+		height: 672px;
+		position: absolute !important;
+		z-index: 0;
+		bottom: 3%;
+		right: 90%px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+        opacity: 0.3;
+   }
+   .c-title{
+        color: #00a6a6 !important;   
+		font-size: 45px !important;
+		line-height: 48px !important; 
+		font-weight: 700 !important;
+		letter-spacing: 0px !important;
+		text-transform: uppercase !important;
+	}
+	#pills-2021winner,#pills-award,#pills-judge,#pills-contact,#pills-partners{
+		margin-top:150px;
+	}
+	.slides,.gallery_inner{
+		display:flex;
+		list-style:none;
+		flex-direction: row;
+	}
+	.slides{
+		overflow:hidden;
+	}
+	.slides li{
+		width: auto !important;
+		padding: 20px;
+	}
+	.gallery_inner li{
+		width: 23.5%;
+		margin: 0 2% 2% 0;
+	}
+	.slides img{
+		width: 120px;
+	}
+	.spacer{
+	  margin-top:60px;
+      z-index:100;
+	 }
+	 .grayscale img {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+	.grayscale img:hover {
+		-webkit-filter: none !important;
+		filter: none !important;
+	}
+	.gallery_inner1 li {
+		width: 21.5% !important;
+		margin: 0 2% 2% 0 !important;
+		position: relative !important;
+		display: block !important;
+		float: left !important;
+		/* overflow: hidden; */
+	}
+	.mb-card-bank{
+		font-size:18px !important;
+		font-weight:normal !important;
+	}
+	.read-more{
+		text-decoration:none;
+		color:#000 !important;
+	}
+	.read-more:hover{
+		color:#1abc9c !important;
+	}
+</style>
+<div id="myBtn">Top</div>
+<section class="bg-meinnovation fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light pt-4 ">
+        <div class="container-lg px-2">
+            <a class="navbar-brand w-12" href="#">
+                <img src="./../images/logo.png" class="nav-logo w-50" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll"  aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fas fa-bars fa-2x text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse pt-3" id="navbarScroll">
+                <ul class="nav navbar-nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+                    <li class="nav-item px-2" role="presentation">
+                        <a class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" alt-value="">Home</a>
+                    </li>                   
+                    <li class="nav-item px-2" role="presentation">
+                        <a class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" id="pills-2021winner-tab" data-bs-toggle="pill" data-bs-target="#pills-2021winner" role="tab" aria-controls="pills-2021winner" aria-selected="false" alt-value="2021winner">2021 Winners</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" id="pills-award-tab" data-bs-toggle="pill" data-bs-target="#pills-award" role="tab" aria-controls="pills-award" aria-selected="false" alt-value="award">Awards</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" id="pills-judge-tab" data-bs-toggle="pill" data-bs-target="#pills-judge" role="tab" aria-controls="pills-judge" aria-selected="false" alt-value="judge">Past Judges</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items " id="pills-partners-tab" data-bs-toggle="pill" data-bs-target="#pills-partners" role="tab" aria-controls="pills-partners" aria-selected="false" alt-value="partners">Partners</a>
+                    </li>                   
+                    <li class="nav-item px-2" role="presentation">
+                        <button class="nav-link  mr-3  bg-transparent rounded-0 border-0 page-menu-items" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false" alt-value="register">REGISTER</button>
+                    </li>
+					<li class="nav-item px-2" >
+						
+                            <a href="https://web.facebook.com/<<youpage>>/" target="_blank" rel="noopener noreferrer" style="font-size:25px;" class="text-white px-2"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/<<your_page>>" target="_blank" rel="noopener noreferrer" style="font-size:25px;"class="text-white px-2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/<<youpage>>/" target="_blank" style="font-size:25px;"rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/<<your_page>>/"  style="font-size:25px;"target="_blank" rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-instagram"></i></a>
+                        
+					</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</section>
+<section class="tab-conent-section">
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane main-tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">			
+			<section class="banner-meinnovation">
+				<div class="py-4 bg-meinnovation-style">
+					
+				</div>
+				<h2 class="text-center banner-overlay-text"><b id="banner-overlay-text-change" class="roboto">MEInnovation 2022</b></h2>
+				<div class="banner-shape banner-shape-bottom " hidden>
+					<img src="./../images/banner.jpg" />
+				</div>
+			</section>
+			<section class="deadline-meinnovation">
+				<div class="row py-4 deadline-announce w-100"  data-aos="fade-up">
+					 <div class="col-lg-8 col-12 px-4 deadline-announce-txt">
+						<h1 style="color: #ffffff; font-size: 40px;">NOMINATIONS ARE OPEN <br/>
+						till 4<sup>th</sup> March 2022</h1>
+					 </div>
+				</div>
+			</section>
+            <div class="home-card-section">
+				<div class="fixed-background-image">
+					<div class="py-4 bg-meinnovation-style">					
+					</div>				
+					<div class="banner-shape banner-shape-bottom " hidden>
+					</div>
+				</div>
+				<div class="fixed-background-image-bottom">
+					<div class="py-4 bg-meinnovation-style">					
+					</div>				
+					<div class="banner-shape banner-shape-bottom " hidden>
+					</div>
+				</div>
+                <div class="container-lg spacer"  data-aos="fade-up">
+                    <div class="row py-4">
+                        <div class="col-lg-8 col-12 px-4">
+							<h2> ABOUT </h2>
+							<div>								
+								The 4<sup>th</sup> annual <strong><< your business name>></strong>, is the world’s only program dedicated to recognising pioneering innovation in Digital Customer Experience across the Financial Services ecosystem. The program exists to assess the ever changing need of customers in the digital economy and how financial services organisations, FinTechs and BigTechs are creating new business models through the lens of FinTech and transforming the customer journey across all digital touch points.
+							</div>
+							<h2 style="margin-top:10px;"> WHY << your business>>? </h2>
+							<div>
+								Incumbent FSI organisations are being mandated to exponentially increase the number of digitally active customers, together with the number of end-to-end digitally accessible products and services in order to remain relevant in the next 5-10 years. The truth is, we are not even touching the surface of what FinTechs and other digital propositions will be able to offer customers in five years time. Now, more than ever, it is imperative that Banks and Insurance firms deliver exceptional digital experiences through innovative business models and services.
+
+							</div>
+                        </div>
+					</div>	
+                </div>
+                <div class="container-lg home-header-text-color spacer" >
+                    <div class="row py-4">
+						<div class="col-lg-4 col-12 px-4">
+							<h2 class="c-title"> WHY ATTEND </h2>
+							<ul> 
+								<li>Learn how to apply First Principles Thinking & truly innovate</li> 
+								<li>Benchmark your organisation’s infrastructure against the world’s most highly rated Customer Experience FSI Organisations’</li> 
+								<li>Get the latest on CX technologies to supercharge service innovation, UX and UI</li> 
+								<li>Hear from CX Pioneers that are reinventing the industry</li> 
+								<li>Find out how Open API architectures and Ecosystems are transforming the customer journey</li> 
+								<li>Celebrate Excellence with the world’s Best FSI Organisations</li>
+							</ul>
+						</div>
+						<div class="col-lg-8 col-12 px-4">
+							 <h2 class="c-title"> JOB TITLES ATTENDING </h2>
+							 <div class="row">								
+								<div class="col-lg-6 col-12 px-4">
+									<ul> 
+										<li>Chief Customer Officer</li>
+										<li>Chief Digital Officer</li> 
+										<li>Chief Data Officer</li> 
+										<li>Chief Information Officer</li>
+										<li>Chief Technology Officer</li> 
+										<li>Chief Marketing Officer</li> 
+										<li>Head of Customer Centricity</li> 
+										<li>Head of Customer Experience</li> 
+										<li>Head of Customer Insights</li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-12 px-4" style="z-index:9;">
+									<ul> 
+										<li>Head of Customer Engagement</li> 
+										<li>Head of Retail Banking & Wealth Management</li> 
+										<li>Head of Private Banking</li> 
+										<li>Head of Contact Center</li> 
+										<li>Head of SME Banking</li> 
+										<li>Head of P&C</li> 
+										<li>Head of Life Insurance</li> 
+										<li>Head of Digital Transformation</li> 
+										<li>Head of Innovation</li>
+									</ul>
+								</div>
+							</div>	
+						</div>
+						<div class="row py-4 spacer">
+							 <h2 class="c-title text-center py-4"> PAST EVENT HIGHLIGHTS </h2>
+							 <div class="col-lg-6 col-12 px-4 py-2 text-center qode_video_box">
+								<p class="text-center"><strong>GLOBAL RETAIL BANKING INNOVATION AWARDS GALA 2019</strong></p>
+								<a itemprop="image" class="qode_video_image" href="#" data-rel="prettyPhoto" rel="prettyPhoto">
+									<img class="lazy loaded" src="./../images/video1-550.jpg" data-src="./../images/video1-550.jpg" data-was-processed="true"> 
+									<span class="qode_video_box_button_holder" play_url="hhttps://www.youtube.com/embed/JGwWNGJdvx8" data-rel="prettyPhoto"> <span class="qode_video_box_button"> 
+									<span class="qode_video_box_button_arrow"> </span> </span> </span> 
+								</a>
+							 </div>
+							 <div class="col-lg-6 col-12 px-4 py-2 text-center qode_video_box">
+								<p  class="text-center"><strong>GLOBAL PRIVATE BANKING INNOVATION AWARDS 2019</strong></p>
+								<a itemprop="image" class="qode_video_image" href="#" data-rel="prettyPhoto" rel="prettyPhoto">
+								<!-- <a itemprop="image" class="qode_video_image" href="https://www.youtube.com/watch?v=ig38K12yuac;" data-rel="prettyPhoto" rel="prettyPhoto"> -->
+									<img class="lazy loaded" src="./../images/video2.jpg" data-src="./../images/video2.jpg" data-was-processed="true"> 
+									<span class="qode_video_box_button_holder" play_url="https://www.youtube.com/embed/JGwWNGJdvx8" > <span class="qode_video_box_button"> 
+									<span class="qode_video_box_button_arrow"> </span> </span> </span> 
+								</a>
+							 </div>
+                             <div id="video-player" class="video-player hide">
+                                <button id="close-video-player" class="border-0 bg-transparent p-3 text-white">x</button>
+                            </div>
+						</div>
+						<div class="row py-4 spacer">
+							 <h2 class="c-title text-center"> PARTICIPATING ORGANISATIONS </h2>
+							 <div class="py-4">	
+								<ul class="slides" >
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								   <li class="item" style="width: 231px;">
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+									  <div class="carousel_item_holder"><span class="first_image_holder "><img class="lazy loaded" itemprop="image" 
+                                        src="#" data-src="#" alt="carousel image" data-was-processed="true"></span></div>
+								   </li>
+								</ul>
+							</div>	
+						</div>
+						<div class="row py-4 spacer">
+                                <div class="py-4"><h2 class="c-title text-center"> PAST SPONSORS </h2></div>
+                                 
+						</div>
+					</div>	
+                    
+                </div>
+			</div>
+		</div>	
+         <div class="tab-pane main-tab-pane fade pt-3 show fixed-background-image2" id="pills-2021winner" role="tabpanel" aria-labelledby="pills-2021winner-tab">
+                    <div class="container-lg py-3 pt-5"  data-aos="fade-down">
+						<h2 class="c-title text-center"> 2021 WINNERS </h2>						
+                        <div class="row">							
+                            <div class="col-lg-12 p-3">
+								<div class="d-flex align-items-start">
+                                    <div class="nav flex-column nav-pills winner-tabs " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs  active" id="v-pills-startegy-tab" data-bs-toggle="pill" data-bs-target="#v-pills-startegy" role="tab" aria-controls="v-pills-startegy" aria-selected="true"><strong>Strategy</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-technology-tab" data-bs-toggle="pill" data-bs-target="#v-pills-technology" role="tab" aria-controls="v-pills-technology" aria-selected="false"><strong>Technology</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-digital-omni-channel-tab" data-bs-toggle="pill" data-bs-target="#v-pills-omni-channel" role="tab" aria-controls="v-pills-omni-channel" aria-selected="false"><strong>Omni Channel</strong></a>
+										<a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-retail-tab" data-bs-toggle="pill" data-bs-target="#v-pills-retail" role="tab" aria-controls="v-pills-retail" aria-selected="true"><strong>Retail</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-insurance-tab" data-bs-toggle="pill" data-bs-target="#v-pills-insurance" role="tab" aria-controls="v-pills-insurance" aria-selected="false"><strong>Insurance</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-digital-wealth-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wealth" role="tab" aria-controls="v-pills-wealth" aria-selected="false"><strong>Wealth Management</strong></a>
+										<a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-wholesale-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wholesale" role="tab" aria-controls="v-pills-wholesale" aria-selected="true"><strong>Wholesale / Transaction Banking</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-fintech-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fintech" role="tab" aria-controls="v-pills-fintech" aria-selected="false"><strong>FinTech</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-private-tab" data-bs-toggle="pill" data-bs-target="#v-pills-private" role="tab" aria-controls="v-pills-private" aria-selected="false"><strong>Private Banking</strong></a>
+										<a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-strategy-tab" data-bs-toggle="pill" data-bs-target="#v-pills-strategy" role="tab" aria-controls="v-pills-strategy" aria-selected="true"><strong>Strategy</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-islamic-tab" data-bs-toggle="pill" data-bs-target="#v-pills-islamic" role="tab" aria-controls="v-pills-islamic" aria-selected="false"><strong>Islamic Finance</strong></a>
+                                        <a href="#" class="nav-link bg-transparent border-radius-0 rounded-0 mb-card-tabs " id="v-pills-leadership-tab" data-bs-toggle="pill" data-bs-target="#v-pills-leadership" role="tab" aria-controls="v-pills-leadership" aria-selected="false"><strong>Leadership</strong></a>
+									</div>
+									 <div class="tab-content" id="v-pills-tabContent" style="z-index:20;background-color:#fff;">
+										 <div class="tab-pane fade show active py-2 px-3 border" id="v-pills-startegy" role="tabpanel" aria-labelledby="v-pills-startegy-tab">
+											<div class="row">
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CUSTOMER INSIGHT INITIATIVE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">HSBC Bank Limited</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														
+														<div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">AXA</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+													
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CX BUSINESS MODEL</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Emirates NBD</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USE OF CUSTOMER FEEDBACK</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">AXA</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>EXCELLENCE IN CUSTOMER SERVICE INNOVATION</b>
+                                                        <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">HSBC Bank Company Limited</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">RHB Bank Berhad</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>EXCELLENCE IN NEXT-GEN CUSTOMER SATISFACTION</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">RHB Bank Berhad</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>                                       
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING CX IN DIGITAL SALES STRATEGY</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Ngern Tid Lor Public Company Limited</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING << your business>> STRATEGY – OVERALL</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">TMRW by UOB</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                          <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Mox Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING TRANSFORMATION IN << your business>> DURING COVID19</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                          <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Malayan Banking Berhad</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														<h4 class="text-center mb-card-bank">CIMB Berhad</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														<h4 class="text-center mb-card-bank">UOB Thailand</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING TRANSFORMATION IN << your business>> DURING COVID19 – TRANSACTION BANKING</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">CIMB THAI BANK PUBLIC COMPANY LIMITED</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING USE OF DIGITAL CHANNELS FOR IMPROVED CX</b>
+                                                        <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">FWD Insurance</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING USE OF DIGITAL CHANNELS FOR IMPROVED CX – TRANSACTION BANKING</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">CIMB THAI BANK PUBLIC COMPANY LIMITED</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+										 </div>
+										 <!-- start -->
+										  <div class="tab-pane fade py-2 px-3 border " id="v-pills-technology" role="tabpanel" aria-labelledby="v-pills-technology-tab">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CLOUD INITIATIVE FOR << your business>></b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Ban</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST << your business>> PARTNER/VENDOR</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Absa RBB, South Africa</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														<div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST ROBO ADVISORY EXPERIENCE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">HSBC</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">TAIPEI FUBON COMMERCIAL BANK CO., LTD</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST TECHNOLOGY IMPLEMENTATION FOR << your business>></b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                          <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">PT Bank CTBC Indonesia</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														 <h4 class="text-center mb-card-bank">RHB Bank Berhad</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USE OF AI FOR CUSTOMER EXPERIENCE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank Limited</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USE OF DATA AND ANALYTICS FOR CX</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Fubon Life Insurance Co., Ltd.</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">PT Bank Rakyat Indonesia, TBK</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														<h4 class="text-center mb-card-bank">Ngern Tid Lor Public Company Limited</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USE OF TECHNOLOGY FOR CUSTOMER EXPERIENCE – OVERALL</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING BLOCKCHAIN INITIATIVE FOR CUSTOMER EXPERIENCE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">CTBC Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+														<h4 class="text-center mb-card-bank">Union Bank of the Philippines</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>OUTSTANDING BLOCKCHAIN INITIATIVE FOR CUSTOMER EXPERIENCE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">CTBC Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Absa RBB, South Africa</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										 <!-- end -->
+										<!-- start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-omni-channel" role="tabpanel" aria-labelledby="v-pills-omni-channel-tab">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CUSTOMER EXPERIENCE – ATM</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Taishin International Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>                                                      
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CUSTOMER EXPERIENCE – SOCIAL MEDIA</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Citibank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-1 my-3">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">TAIPEI FUBON COMMERCIAL BANK CO., LTD</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST CUSTOMER EXPERIENCE – BRANCH</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-1 my-3">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Taishin International Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USER EXPERIENCE – INTERNET BANKING</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Citibank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-1 my-3">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+                                                    <div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>BEST USER EXPERIENCE – MOBILE BANKING</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Krungsri Consumer</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                         <div class="bg-orange text-dark text-center px-4 py-1 my-3">
+                                                            <strong>Highly Acclaimed</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">RCBC Bankard</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div> 
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+                                                        <b>EXCELLENCE IN OMNI-CHANNEL CUSTOMER EXPERIENCE</b>
+                                                        <div class="bg-gold text-dark text-center px-4 py-1 my-3">
+                                                            <strong>WINNER</strong>
+                                                        </div>
+                                                        <h4 class="text-center mb-card-bank">Alliance Bank</h4>
+                                                        <div class="px-5 py-3 mb-card-image">
+                                                            <img src="#" class="w-100" alt="">
+                                                        </div>
+                                                    </div>
+												</div>
+                                             </div>
+                                         </div>
+										 <!-- end -->
+										  <!-- Retail Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-retail" role="tabpanel" aria-labelledby="v-pills-retail-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your Business >> for CX – Overall</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">TMRW by UOB</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		 
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your_Business>> for CX – Hong Kong</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Citibank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your_Business>> for CX – Malaysia</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Malayan Banking Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">RHB Bank Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your_Business>> for CX – Taiwan</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">CTBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Bank SinoPac</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your_Business>> for CX – Thailand</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		 
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << Your_Business>> for CX – Philippines</b>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">ING Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>	 
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << your business>> – Account Opening and Customer Onboarding</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Malayan Banking Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Retail Bank for << your business>></b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<h4 class="text-center mb-card-bank">Taishin International Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Bank Cards</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Malayan Banking Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">CTBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Mobile App</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Bank SinoPac</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Mortgage Product</b>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Payments</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">CTBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">RHB Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – SME Banking</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Malayan Banking Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">AFFIN BANK BERHAD</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Loans</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">CTBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank Limited</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+											</div> <!-- end of "row" -->
+										</div>
+										<!-- Retail End -->
+										<!-- Insurance Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-insurance" role="tabpanel" aria-labelledby="v-pills-insurance-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding CX Transformation in Insurance</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Liberty Group SA</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – Corporate Insurance</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Fubon Insurance Co., Ltd.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << your business>> – General Insurance</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">PT Mandiri AXA General Insurance</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Use of AI for Customer Experience – Insurance</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">AXA</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">FWD Insurance</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+											</div><!-- "row" End -->											
+										</div>
+										<!-- Insurance End -->
+										<!-- Wealth Management Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-digital-wealth" role="tabpanel" aria-labelledby="v-pills-digital-wealth-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best << your business>> – Account Opening and Customer Onboarding</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Wealth Management Provider for << your business>></b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">IDFC First Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Wealth Management Provider for Digitally Empowering RMs</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Excellence in User Experience – Mobile App</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">PT Bank CTBC Indonesia</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">FWD Insurance</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Excellence in User Experience – Website</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">IDFC First Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Innovation in << your business>> – Fixed-Income</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Union Bank of the Philippines</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Innovation in << your business>> – Equities</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Wealth Management End -->
+										<!-- Wholesale Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-wholesale" role="tabpanel" aria-labelledby="v-pills-wholesale-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>BEST << your business>> – ACCOUNT OPENING AND CUSTOMER ONBOARDING</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Goldman Sachs Transaction Banking</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">AmBank (M) Berhad</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>BEST WHOLESALE / TRANSACTION – BANK FOR << your business>></b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>OUTSTANDING << your business>> – CASH MANAGEMENT PLATFORM</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Goldman Sachs Transaction Banking</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>OUTSTANDING << your business>> – PAYMENTS AND COLLECTION SERVICES</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>OUTSTANDING << your business>> – TRADE FINANCE INITIATIVE</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">TAIPEI FUBON COMMERCIAL BANK CO., LTD</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>											
+											</div>
+										</div>
+										<!-- Wholesale End -->
+										<!-- FinTech Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-fintech" role="tabpanel" aria-labelledby="v-pills-fintech-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << your business>> – Alternative Wealth Management</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << your business>> – Personal Finance</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Kasikorn Line Co.,Ltd.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << your business>> – Business Lender</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Ping An OneConnect Bank Limited</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << your business>> – Consumer Lender</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">PT Bank Rakyat Indonesia, TBK</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << Your Busineess Name>> – Cross Border Payments</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Taishin International Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Fintech for << Your Busineess Name>> – Payments</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">RAKBANK</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Insurtech for << Your Busineess Name>></b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Liberty Group SA</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding << Your Busineess Name>> in Banking App Platform</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Mox Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+														<div class="bg-orange text-dark text-center px-4 py-1 my-3">
+															<strong>Highly Acclaimed</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">CIMB</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>
+													</div>
+												</div>											
+											</div>
+										</div>
+										<!-- FinTech End -->
+										<!-- Private Banking Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-private" role="tabpanel" aria-labelledby="v-pills-private-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Innovation in << Your Busineess Name>> – Investment Product/Service</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Innovation in << Your Busineess Name>> – Platform/Website</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">KASIKORNBANK PCL.</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>			
+													</div>
+												</div>											
+											</div>
+										</div>
+										<!-- Private Banking End -->
+										<!-- Islamic Finance Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-islamic" role="tabpanel" aria-labelledby="v-pills-islamic-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Islamic Bank for << Your Busineess Name>> – Overall</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Islamic Bank for << Your Busineess Name>> – Bangladesh</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Best Islamic Bank for << Your Busineess Name>> – Malaysia</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Innovation in << Your Busineess Name>> in ProductService – Islamic Banking</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">HSBC Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>											
+											</div>
+										</div>
+										<!-- Islamic Finance End -->
+										<!-- Leadership Start -->
+										<div class="tab-pane fade py-2 px-3 border" id="v-pills-leadership" role="tabpanel" aria-labelledby="v-pills-leadership-tab">
+											<div class="row">
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>CX Professional of the Year</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Sham Arora</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Leadership in Customer Experience – Team</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Union Bank of the Philippines</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>Outstanding Leadership in Customer Experience Institution</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>
+												<div class="col-xl-3 col-sm-6 winners-card p-1">
+													<div class="rounded-0 border p-4 text-center mb-card">
+														<b>CX Institution of the Year</b>
+														<div class="bg-gold text-dark text-center px-4 py-2 my-3 mb-card-winner-text">
+															<strong>WINNER</strong>
+														</div>
+														<h4 class="text-center mb-card-bank">Standard Chartered Bank</h4>
+														<div class="px-5 py-3 mb-card-image">
+															<img src="#" class="w-100" alt="">
+														</div>		
+													</div>
+												</div>											
+											</div>
+										</div>
+										<!-- Leadership End -->
+									 </div>
+								</div>   
+							</div>
+						</div>
+					</div>		
+		</div>						
+                <div class="tab-pane main-tab-pane fade show fixed-background-image3" id="pills-award" role="tabpanel" aria-labelledby="pills-award-tab">
+                    <div class="container-lg"  data-aos="fade-down" style="z-index:20;">
+                        <div class="row pb-4">
+                           
+                            <div class="row">
+                                <div class="col-lg-12">                                    
+                                    <div class="row ">
+                                        <div class="col-lg-12 p-5" style="text-align:justify;" data-aos="fade-down">
+                                            
+                                            <div class="row" style="opacity:.8;background:#fff;z-index:20;">
+                                                <div class="col-lg-6 px-3">
+													<h2 class="py-2 header-font-weight"><strong class="text-color"><< Your Busineess Name>> Awards 2022
+</strong></h2>
+                                                    <p>The <b><< Your Busineess Name>> Awards</b>, organised by The << Your_Business>>er, exist to honour and celebrate the world’s preeminent and ground breaking financial service institutions’ and their distinguished individuals’ contribution to customer experiences and journeys.
+													</p>
+													<p>The << Your_Business>>er Awards are accolades of excellence and distinction, attributed to outstanding players; and provides unbiased and objective benchmarks for the global industry. DCX Awards 2022 is the world’s only assessment program dedicated to recognising excellence in Digital Customer Experience across the Financial Services landscape. These awards celebrate the world’s most cutting-edge financial service providers that are pioneering unrivalled standards and capabilities- those that are transforming the industry by setting new milestones by digitally transforming to deliver a consistent customer experience across all lines of business.
+													</p> 
+													<p>If you identify your organisation and/or professionals as industry leaders that are pushing boundaries and pioneering unsurpassed innovation across CX - we welcome you to send in your nominations. The submission deadline for all entries is 18:00 GMT, 4th March 2022.
+													</p>
+                                                </div>
+                                                <div class="col-lg-6 px-3">
+													<h2 class="py-2 header-font-weight"><strong class="text-color">For WHY NOMINATE?</strong></h2>
+                                                    <p>Having embarked on digital transformation journeys prior to and during the COVID-19 pandemic, the financial services industry vastly improved the usability of digital experiences in line with customer expectations. Taking cognizance of rapid disruptions across the landscape forced service providers to rethink current business models and adapt to a customer centric approach. The penetration of digital devices worldwide also forced banks to now build an effective and organic relationship with its customers. The benefits of these relationship are already reaping rewards as banks now have access to over a million data-points to enhance customer engagement. Yet, banks are under pressure from disruptors and new entrants who are actively growing in numbers and expanding their customer base.
+													</p><p>	
+													Now, more than ever, it is imperative that financial service firms deliver exceptional digital experiences through innovative business models and services.
+													</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="row">
+								<div class="call_to_action  col-lg-12 with_background_image lazy" style="background-color: rgb(0, 166, 166); padding-top: 20px; padding-bottom: 20px; background-image: url('https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/10/pattern-hd.png');background-size: 45%;   background-position: left;  background-repeat: no-repeat;" data-bg="url(https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/10/pattern-hd.png);" data-was-processed="true">
+								   <div class="container_inner">
+									  <div class="text_wrapper column1" style="padding-left: 35vw !important;">
+										 <div class="call_to_action_text  font_size_inherit font_weight_inherit letter_spacing_inherit" style="font-size:16px;font-weight: 400;letter-spacing: 0px;">
+											<h1><span style="color: #ffffff;">SUBMISSION DEADLINE</span></h1>
+											<p> </p>
+											<!-- <p><span style="color: #ffffff;"><< Your Busineess Name>> 2021 Awards Gala will be held on 4<sup>th</sup> Mar 2021</span></p> -->
+											<p><span style="color: #ffffff;"><< Your Busineess Name>> 2022 Awards Gala will be held on 28 April 2022</span></p>
+										 </div>
+										 <a itemprop="url" href="mailto:awards@digitalbankeronline.com?Subject=Request for nomination pack" class="qbutton btn btn-warning btn-large white large" target="" style="color: rgb(255, 255, 255); border-color: rgb(241, 89, 46); background-color: rgb(241, 89, 46);" data-hover-background-color="#ffffff" data-hover-border-color="#ffffff" data-hover-color="#f1592e">REQUEST NOMINATION PACK</a>
+									  </div>
+								   </div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+				</div>	
+                    <div class="tab-pane main-tab-pane fade show fixed-background-image3" id="pills-judge" role="tabpanel" aria-labelledby="pills-judge-tab">
+                        <div class="container-lg py-5">
+						<div class="row" style="background:#fff;z-index:20;opacity:.8;">
+							<h2 class="c-title text-center">JUDGES</h2>
+								<div class="col-xl-3 col-sm-6 py-1 px-1">
+                                       <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/01/tom.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">TOM MOUHSIAN</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Principal Analyst, Customer Experience (APAC)</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Forrester</h4>
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/02/forrester.png" alt="Judge" class="w-50">
+                                         </div>
+								</div>
+								<div class="col-xl-3 col-sm-6 py-1 px-1">
+										  <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/01/alla.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">ALLA GANCZ</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Partner</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">CAPCO</h4>
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/01/CAPCO-logo-3200x3200-square-1-scaled-150x80.jpg" alt="Judge" class="w-50">
+                                         </div>
+								</div>
+								<div class="col-xl-3 col-sm-6 py-1 px-1">		 
+										  <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/10/Frederic-Giron-PR.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">FREDERIC GIRON</b></h4>
+                                                    <p>
+                                                        <span class="text-success">VP, Research Director</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Forrester</h4>
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/02/forrester.png" alt="Judge" class="w-50">
+                                         </div>
+								</div>
+								<div class="col-xl-3 col-sm-6 py-1 px-1">		 
+										  <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/02/John.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">JOHN DOVASTON</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Asia Pacific Financial Services Leader</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">PWC</h4>
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2018/12/PWC-agenda-90x68.png" alt="Judge" class="w-50">
+                                         </div>
+                                </div>
+								<div class="col-xl-3 col-sm-6 py-1 px-1">		 
+										  <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/02/hok.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">HO HOK YONG</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Financial Services Industry Leader, Deloitte Southeast Asia</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Deloitte</h4>
+                                                    <img src="https://digitalcx.digitalbankeronline.com/wp-content/uploads/2021/02/1024px-Deloitte-190x41.png" alt="Judge" class="w-50">
+                                         </div>
+                                </div>
+						</div>
+                       <div class="row spacer">
+								<div class="call_to_action  col-lg-12 with_background_image lazy" style="background-color: rgb(0, 166, 166); padding-top: 20px; padding-bottom: 20px; background-image: url('https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/10/pattern-hd.png');background-size: 45%;   background-position: left;  background-repeat: no-repeat;" data-bg="url(https://digitalcx.digitalbankeronline.com/wp-content/uploads/2019/10/pattern-hd.png);" data-was-processed="true">
+								   <div class="container_inner">
+									  <div class="text_wrapper column1" style="padding-left: 35vw !important;">
+										 <div class="call_to_action_text  font_size_inherit font_weight_inherit letter_spacing_inherit" style="font-size:16px;font-weight: 400;letter-spacing: 0px;">
+											<h1><span style="color: #ffffff;">APPLY TO BE A JUDGE</span></h1>
+											<p> </p>
+											<p><span style="color: #ffffff;">Carefully selected external Judges are invited to co-judge The << Your_Business>>er’s award’s due to their extensive experience in executing and advising on major transformation projects for FSI organisations. All TDB co-judges must be subject matter experts and ensure transparency and unbiasedness in adjudication.
+											</span></p>
+											<p>
+											 <span style="color: #ffffff;">To apply to be a judge for the << Your Busineess Name>> Awards, please contact Nirav Patel on +65 8699 3601 or <a href="mailto:awards@digitalbankeronline.com?Subject=Apply to be a judge" style="color:#fff;text-decoration:underline;"> nirav@digitalbankeronline.com </a></span> </p>
+											</div>
+										 <a itemprop="url" href="mailto:nirav@digitalbankeronline.com?Subject=Apply to be a judge" class="qbutton btn btn-warning btn-large white large" target="" style="color: rgb(255, 255, 255); border-color: rgb(241, 89, 46); background-color: rgb(241, 89, 46);" data-hover-background-color="#ffffff" data-hover-border-color="#ffffff" data-hover-color="#f1592e">APPLY NOW</a>
+									  </div>
+								   </div>
+								</div>
+						</div>
+                        <div class="row spacer" style="background:#fff;z-index:20;opacity:.8;">
+							<h2 class="c-title text-center">PAST JUDGES</h2>
+                            <div class="col-lg-12 col-12">
+                                <ul class="nav nav-tabs mb-0 hidden" style="display:none;" id="judgeTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active fw-bold color-gold" id="past-co-judge-tab" data-bs-toggle="tab" data-bs-target="#past-co-judge" type="button" role="tab" aria-controls="past-co-judge" aria-selected="true">PAST JUDGES</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content " id="judgeTabContent">
+                                    <div style="border:none !important;" class="tab-pane fade show active border border-top-0 rounded-0 p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">ANDREW TAGGART</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Partner, Financial Services Leader</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													 <h4 class="py-2">PwC South East Asia Consulting</h4>
+                                                    <img src="./../images/5.jpg" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">EDGE ZARRELLA</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Clients and Innovation Partner</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">KPMG China</h4>
+                                                    <img src="./../images/5.jpg" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">NSIMON PARTRIDGE</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Regional Client Director</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">FujiXerox</h4>
+                                                    <img src="./../images/5.jpg" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">ANSHUMAN SINGH</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Partner, Financial Services, ASEAN</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Ernst & Young LLP</h4>
+                                                    <img src="./../images/5.jpg" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/logo.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">ALLWYN BARRETO</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Partner, Financial Services Consulting</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													 <hr class="mx-5 border-bottom">
+													 <h4 class="py-2">KPMG</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/logo.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">JORDAN WINDEBANK</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Managing Director, Financial Services Technology Leader</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">South East Asia Consulting</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">FREDERIC GIRON</b></h4>
+                                                    <p>
+                                                        <span class="text-success">VP, Research Director</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Forrester</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">NAMITA BHIDE</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Founder I Payments I Innovation I Digital I Strategic Problem Solver I FinTech & RegTech I Gender Equity I Advisor</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Denim Consulting</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">GREGOR NEVELING</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Principal Advisor</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">KPMG</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/logo.png" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">GWENDOLYN LIM</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Partner</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Bain & Company</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">MOULI PONNUPANDY</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Principle Consultant</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">Wipro Digital</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-sm-6 py-1 px-1">
+                                                <div class="rounded-0 border text-center p-4 h-100 judge-panel">
+                                                    <img src="./../images/5.jpg" alt="Judge" class="rounded-circle w-50">
+                                                    <h4 class="py-2"><b class="text-dark">NAM SOON LIEW</b></h4>
+                                                    <p>
+                                                        <span class="text-success">Regional Managing Partner, ASEAN</span>
+                                                    </p>
+                                                    <hr class="mx-5 border-bottom">
+													<h4 class="py-2">EY</h4>
+                                                    <img src="./../images/logo.png" alt="Judge" class="w-50">
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>                  
+                    <div class="tab-pane main-tab-pane fade show fixed-background-image3" id="pills-partners" role="tabpanel" aria-labelledby="pills-partners-tab">
+                        <div class="container-lg py-5">
+                           <h2 class="c-title text-center">SPONSORS</h2>                        
+						    <div class="row spacer">
+								<div class="call_to_action  col-lg-12 with_background_image lazy" style="background-color: rgb(0, 166, 166); padding-top: 20px; padding-bottom: 20px; background-image: url('./../images/banner.jpg');background-size: 45%;   background-position: left;  background-repeat: no-repeat;" data-bg="url(./../images/banner.jpg);" data-was-processed="true">
+								   <div class="container_inner">
+									  <div class="text_wrapper column1" style="padding-left: 35vw !important;">
+										 <div class="call_to_action_text  font_size_inherit font_weight_inherit letter_spacing_inherit" style="font-size:16px;font-weight: 400;letter-spacing: 0px;">
+											<h1><span style="color: #ffffff;">WHY SPONSOR?</span></h1>
+											<p> </p>
+											<ul style="color:#fff;">
+												<li>Meet Project Owners (awardees whose CX Initiatives now need to be Advanced to the Next Stage).
+												</li>
+												<li>Customised Meetings with Qualified Buyers of CX Technologies from Tier 1-3 FSI organisations across 24 countries.
+												</li>
+												<li>Cut Through the Noise & Showcase your Solutions/Products to FinServ’s actively Seeking Solutions to Transform CX and Supercharge Digital Adoption
+												</li>
+												<li>Position your Organisation as Thought Leader in the CX, UX, UI Space
+												</li>
+												<li>Meet Award Winners of Specific Projects that now need to be advanced to the next stage.
+												</li>
+												<li>Raise Awareness of your Brand and Use Case
+												</li>
+											</ul>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="row spacer">
+									 <h2 class="c-title text-center">PAST SPONSORS</h2>
+									 <ul class="gallery_inner gallery_inner1 gallery_with_space  spacer v4" style="list-style: none;    display: none;    width: 100%;    position: relative;    margin: 0;    padding: 0;">
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="ey-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="kpmg-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="pwc-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="oracle-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="kenvault-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="fuji-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="sf-240" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="sap-2" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="fiserv" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="dd" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="260" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="bbb" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="268" height="140" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="TW-268" data-was-processed="true"></li>
+										   <li class="grayscale"><img width="395" height="128" src="./../images/logo.png" data-src="./../images/logo.png" class="attachment-full lazy loaded" alt="" loading="lazy" title="images" data-srcset="./../images/logo.png 395w, ./../images/logo.png 300w" data-sizes="(max-width: 395px) 100vw, 395px" sizes="(max-width: 395px) 100vw, 395px" srcset="./../images/logo.png 395w, ./../images/logo.png 300w" data-was-processed="true"></li>
+									</ul>
+								 </div>
+							 <div class="row spacer">
+								 <h2 class="c-title text-center">MEDIA PARTNERS</h2>
+								 <div class="row spacer" style="opacity:.8;background:#fff;z-index:20;">
+													<div class="col-lg-6 px-3">
+													 <img src="./../images/logo.png" />	
+													</div>
+													<div class="col-lg-6 px-3">
+														<p>
+														<b>The Loyalty Post</b> is India’s leading publication for the loyalty & customer engagement industry. The circulation is over 6000 print copies & close to 12000 digital downloads across Asia. The profile of readers is senior professionals handling marketing, CRM & Loyalty, Big Data & Customer Analytics, Engagement & Experience from across Industry Verticals.
+														</p><p style="padding-top:15px;">
+														Please log on to the link <a href="#" target="_blank"><b><< your_website_address>></b></a> to access the latest digital copy of our recent issue.
+														</p>
+													</div>
+								  </div>
+								  <div class="row spacer" style="opacity:.8;background:#fff;z-index:20;">
+													<div class="col-lg-6 px-3">
+													 <img src="./../images/logo.png" />	
+													</div>
+													<div class="col-lg-6 px-3">
+														<p>
+														Here at <b>Fintech Finance</b>, we work with renowned executives in the industry to provide key decision-makers globally within leading financial services organizations with reliable and accurate intelligence on emerging trends and breakthrough technologies, helping them to make informed decisions.
+
+														</p><p style="padding-top:15px;">
+														We invest heavily in a continually updated global database of decision-makers to ensure precise and accurate coverage of the budget-holders responsible for purchasing and specifying all the products and services they need to operate successfully.At Fintech Finance, we produce monthly video episodes looking at range of topics within financial services, as well as a quarterly publication, with a constant stream of online news plus coverage from attending some of the most prominent events within the sector.
+														<br/>
+														<a class="read-more" href="#" target="_blank>" ><b>Read More..</b></a></p>
+													</div>
+								  </div>
+								   <div class="row spacer" style="opacity:.8;background:#fff;z-index:20;">
+													<div class="col-lg-6 px-3">
+													 <img src="./../images/logo.png" />	
+													</div>
+													<div class="col-lg-6 px-3">
+														<p>
+														<b>The Paypers</b> (thepaypers.com) is the Netherlands-based leading independent source of news and intelligence for professionals in the global payment and ecommerce community. Our readership consists of merchants, banks, payment services providers, processors, acquirers, financial institutions and technology vendors.
+														</p><p style="padding-top:15px;">
+														We have a special focus on all major trends and developments in: payment solutions & services, digital payments, digital commerce, B2B payments, payments infrastructure, fraud & risk management, regtech, digital identity, regulation & compliance, banking & fintech, and mergers & acquisitions.<br/>
+														<a class="read-more" href="#" target="_blank>"><b>Read More..</b></a></p>
+													</div>
+								  </div>
+								   <div class="row spacer" style="opacity:.8;background:#fff;z-index:20;">
+													<div class="col-lg-6 px-3">
+													 <img src="./../images/logo.png" />	
+													</div>
+													<div class="col-lg-6 px-3">
+														<p>
+														Customer Relationship Management Academy of Asia is a global Not-for-Profit Organization formulated for offering guidance and support in accelerating further consistent growth of the ever-growing field of Customer Relationship Management (CRM). CRMAA brings together a forum for like-minded professionals focused towards advancing the concept and applications of Customer Relationship Management in multiple industries for strengthening their CRM strategy.</p><p>
+														</p><p style="padding-top:15px;">
+														WWe envisages to help professionals for growth in their career by establishing CRM as a recognized, well-understood and admired discipline. As a collective body, we aim to create a vibrant opportunity and prospect for Customer Relationship Management (CRM) as a discipline and its beneficiaries.
+														<br/>
+														<a class="read-more" href="#" target="_blank>"><b>Read More..</b></a></p>
+													</div>
+								  </div>
+								   <div class="row spacer" style="opacity:.8;background:#fff;z-index:20;">
+													<div class="col-lg-6 px-3">
+													 <img src="./../images/logo.png" />	
+													</div>
+													<div class="col-lg-6 px-3">
+														<p>
+														PR Newswire, a Cision company, is the premier global provider of multimedia platforms and distribution that marketers, corporate communicators, sustainability officers, public affairs and investor relations officers leverage to engage key audiences. Having pioneered the commercial news distribution industry over 60 years ago, PR Newswire today provides end-to- end solutions to produce, optimize and target content — and then distribute and measure results.</p><p>
+														</p><p style="padding-top:15px;">
+														Combining the world’s largest multi-channel, multi-cultural content distribution and optimization network with comprehensive workflow tools and platforms, PR Newswire powers the stories of organizations around the world. PR Newswire serves tens of thousands of clients from offices in the Americas, Europe, Middle East, Africa and Asia-Pacific regions.<br/>
+														<a class="read-more" href="#" target="_blank>"><b>Read More..</b></a></p>
+													</div>
+								  </div>
+							</div>	 
+						</div> 
+                    </div>					
+                </div>
+            </section>
+            <section class="footer text-white" style="margin-bottom: -20px;">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <p class="py-3">Brought to you by <b>THE</b> DIGITAL <b>BANKER</b>.
+                                All rights reserved 2020.<br/>
+                                <b>THE</b> << Your Business >> is a brand of << Org group >> Pte Ltd 
+                                Registered in Singapore.
+                            </p>
+                        </div>
+                        <div class="col-lg-2 social-icons-section pt-4">
+                            <a href="https://web.facebook.com/<< your_page >>/" target="_blank" rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/<< your_page >>" target="_blank" rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/<< your_page >>/" target="_blank" rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/<< your_page >>/" target="_blank" rel="noopener noreferrer" class="text-white px-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                window.onscroll = function() {scrollFunction()};
+                AOS.init({	duration: 1200});
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+                function scrollFunction() {
+                    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                        $('.bg-meinnovation').addClass('scroll');
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                        $('.bg-meinnovation').removeClass('scroll');
+                    }
+                }
+                function lastPart() {
+                    try {
+                        var url = window.location.pathname;
+                        var parts = url.split("/");
+                        var last_part = parts[parts.length-1];
+                        return last_part;
+                    } catch (error) {
+                        return null;
+                    }
+                    
+                }
+                
+                $(document).ready(function(){
+					// sponsor scroll
+						function animatethis(targetElement, speed) {
+						var scrollWidth = $(targetElement).get(0).scrollWidth;
+						var clientWidth = $(targetElement).get(0).clientWidth;
+						$(targetElement).animate({ scrollLeft: scrollWidth - clientWidth },
+						{
+							duration: speed,
+							complete: function () {
+								targetElement.animate({ scrollLeft: 0 },
+								{
+									duration: speed,
+									complete: function () {
+										animatethis(targetElement, speed);
+									}
+								});
+							}
+						});
+					};
+                    $('.carousel_item_holder img').attr('src','./../images/logo.png');
+                    $('.mb-card-image>img').attr('src','./../images/5.jpg');
+                    $('.judge-panel>img').attr('src','./../images/5.jpg');
+                    $('.judge-panel>img.rounded-circle').attr('src','./../images/user.png');
+
+					animatethis($('.slides'), 10000);
+                    $('#myBtn').click(function(){
+                        topFunction();
+                    });
+                    var navTogglerCloseIcon='<i class="fas fa-times fa-2x text-white"></i>';
+                    var navTogglerCollapseIcon='<i class="fas fa-bars fa-2x text-white"></i>';
+                    $('.navbar-toggler').click(function(){
+                        if($(this).attr('aria-expanded')=="true"){
+                            $(this).empty().append(navTogglerCloseIcon);
+                            $('.bg-meinnovation').addClass('scroll');
+                        }else{
+                            $(this).empty().append(navTogglerCollapseIcon);
+                        }
+                    });
+                    
+                    $('.qode_video_box_button_holder').click(function(){
+                        var play_url=$(this).attr('play_url');
+                        var videoIframe='<iframe width="98%" height="98%" src="'+play_url+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                        $('#video-player').removeClass('hide');
+                        $('#video-player').append(videoIframe);
+                        $('.bg-meinnovation.fixed-top').addClass('hide');
+                    });
+                    $('#close-video-player').click(function(){
+                        $('#video-player').addClass('hide');
+                        $("#video-player").children("iframe").remove();
+                        $('.bg-meinnovation.fixed-top').removeClass('hide');
+                    });
+                    
+                    // $("#pills-register-tab ").attr("href", link ); 
+                    
+                    var last_part = lastPart();
+                    if(last_part!=undefined && last_part=="2021winner"){
+                        $('#banner-overlay-text-change').text("2021 WINNERS")
+                        navMenuActive($('#pills-2021winner-tab'),$('#pills-2021winner'));
+                    }
+                    else if(last_part!=undefined && last_part=="award"){
+                        $('#banner-overlay-text-change').text("AWARD")
+                        navMenuActive($('#pills-award-tab'),$('#pills-award'));
+                    }
+                    else if(last_part!=undefined && last_part=="judge"){
+                        $('#banner-overlay-text-change').text("JUDGES")
+                        navMenuActive($('#pills-judge-tab'),$('#pills-judge'));
+                    }
+                    else if(last_part!=undefined && last_part=="partners"){
+                        $('#banner-overlay-text-change').text("PARTNERS")
+                        navMenuActive($('#pills-partners-tab'),$('#pills-partners'));
+                    }
+                    else if(last_part!=undefined && last_part=="about"){
+                        $('#banner-overlay-text-change').text("ABOUT")
+                        navMenuActive($('#pills-about-tab'),$('#pills-about'));
+                    }
+                    else if(last_part!=undefined && last_part=="contact"){
+                        $('#banner-overlay-text-change').text("CONTACT")
+                        navMenuActive($('#pills-contact-tab'),$('#pills-contact'));
+                    }
+                    else {
+                        $('#banner-overlay-text-change').empty().append("<p class='pt-4'><span>Submission Deadline: 4<sup>th</sup> March 2022</span></p>");
+                        navMenuActive($('#pills-home-tab'),$('#pills-home'));
+                    }
+                    $('.page-menu-items').click(function(){
+                        var altValue=$(this).attr("alt-value");
+                        switch (altValue) {
+                            case 'home':
+                            $('#banner-overlay-text-change').empty().append("<img src='./../images/logo.png' class='w-30' /><p class='pt-4'><span>Submission Deadline: 4<sup>th</sup> March 2022</span></p>");
+                            break;
+                            case 'award':
+                            $('#banner-overlay-text-change').text("AWARD")
+                            break;
+                            case 'judge':
+                            $('#banner-overlay-text-change').text("JUDGES")
+                            break;
+                            case '2021winner':
+                            $('#banner-overlay-text-change').text("2021 WINNERS")
+                            break;
+                            case 'partners':
+                            $('#banner-overlay-text-change').text("PARTNERS")
+                            break;
+                            case 'about':
+                            $('#banner-overlay-text-change').text("ABOUT")
+                            break;
+                            case 'contact':
+                            $('#banner-overlay-text-change').text("CONTACT")
+                            break;
+                            default:
+                            $('#banner-overlay-text-change').empty().append("<p class='pt-4'><span>Submission Deadline: 4<sup>th</sup> March 2022</span></p>");
+                            break;
+                        }
+                        
+                        if(altValue!='register'){
+                            navMenuActive($(this),null);
+                            var first = $(location).attr('pathname');
+                            first.indexOf(1);
+                            first.toLowerCase();
+                            first = first.split("/")[1];
+                            ChangeUrl("The Your Title ","/"+first+"/"+altValue+location.search);
+                        }else{
+                            alert("Register Click!");
+							 var href_link = $("#entrant-topbar-right1 .btn-success").attr("href");
+							//  window.location.href= href_link;
+                        }
+                        $('#navbarScroll').removeClass('show');
+                        $('.navbar-toggler').empty().append(navTogglerCollapseIcon);
+                        return;
+                        
+                    });
+                   
+                    $('.organizer-text').empty();
+                });
+                function navMenuActive(menuID,contentID) {
+                    $('.page-menu-items').removeClass('active');
+                    menuID.addClass("active");
+                    if(contentID!=null){
+                        $('.main-tab-pane').removeClass('active show');
+                        contentID.addClass("active show");
+                    }
+                    
+                }
+                function ChangeUrl(title, url) {
+                    if (typeof (history.pushState) != "undefined") {
+                        var obj = { Title: title, Url: url };
+                        history.pushState(obj, obj.Title, obj.Url);
+                    } else {
+                        alert("Browser does not support HTML5.");
+                    }
+                }
+                try {
+                    // var linkNode = document.querySelector('link[href*="bootstrap.min.css"]');
+                    // var ACElinkNode = document.querySelector('link[href*="ace.min.css"]');
+                    // linkNode.parentNode.removeChild(linkNode);
+                    // ACElinkNode.parentNode.removeChild(ACElinkNode);
+                } catch (error) {
+                    console.log(error);
+                }
+            </script>
