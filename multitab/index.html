@@ -11,6 +11,15 @@
 
 <!-- <link rel="stylesheet" href="./index.css"> -->
 <style>
+* {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+        supported by Chrome, Edge, Opera and Firefox */
+    }
 .text-success{
 	color: #f1592e !important
 }
@@ -2776,6 +2785,22 @@
                 } catch (error) {
                     console.log(error);
                 }
+
+                function ctrlShiftKey(e, keyCode) {
+                return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+                }
+
+                document.onkeydown = (e) => {
+                // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+                if (
+                    event.keyCode === 123 ||
+                    ctrlShiftKey(e, 'I') ||
+                    ctrlShiftKey(e, 'J') ||
+                    ctrlShiftKey(e, 'C') ||
+                    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+                )
+                    return false;
+                };
             </script>
 </body>
 </html>
