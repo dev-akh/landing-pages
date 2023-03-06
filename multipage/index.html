@@ -1014,9 +1014,9 @@
             $('.nav-link').click(function(){
                 navMenuActive($(this),null);
                 var first = $(location).attr('pathname');
-                first.indexOf(1);
+                first.indexOf(2);
                 first.toLowerCase();
-                first = first.split("/")[2];
+                first = first.split("/")[1];
                 ChangeUrl("Ecobank Innovation Race","/"+first+"/"+$(this).attr("alt-value")+location.search);
             });
             // End Menu Click Action
