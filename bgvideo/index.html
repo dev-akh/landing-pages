@@ -1,0 +1,515 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="./index.css"> -->
+<style>
+    #entrant-footer {display:none !important; }
+    #main-container,#main-content,#page-content{width:100% !important;margin:0px !important;padding:0px !important;}
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    
+    *,.roboto{
+        font-family: 'Roboto', sans-serif;
+    }
+    * {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+        supported by Chrome, Edge, Opera and Firefox */
+    }
+    #myTopToggle {
+        display: none;
+        position: fixed;
+        bottom: 52px;
+        right: 31px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #d8a948;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        border-radius: 45px;
+    }
+    
+    #myTopToggle:hover {
+        background-color: #1C1463;
+    }
+
+    .bg-akhawards{
+        background-color: rgb(250, 250, 250);
+    }
+    /* .bg-akhawards.scroll{
+        background-color: rgb(62 60 61 / 87%) !important;
+    } */
+    .w-10 {
+        width: 10%;
+    }
+    .w-lt-20{
+        width: 19.7%;
+    }
+    .w-20{
+        width: 20%;
+    }
+    .w-30{
+        width:30%;
+    }
+    .w-35{
+        width: 35% !important;
+    }
+    .page-menu-items:hover {
+        color: #020E16 !important;
+        /* color: #62C8B2 !important; */
+    }
+    .page-menu-items.active {
+        /* color: #62C8B2 !important; */
+        color: #020E16 !important;
+        font-size: 18px !important;
+    }
+    .page-menu-items{
+        font-size: 17px !important;
+        font-weight: bold;
+    }
+    .mb-description{
+        font-size: 20px;
+    }
+    #akhNavbarScroll{
+        flex-grow: 0;
+    }
+    .banner-akhawards>iframe{
+        height:90vh;
+    }
+    .banner-akhawards{
+       
+    }
+   
+    .bg-akhawards-style{
+        padding-top: 40% !important;
+        height:100%;
+        background-color: transparent;
+        background-image: linear-gradient( 
+180deg, #ecebedc7 30%, #ddad4bab 70%);
+    opacity: 0.3;
+    /* opacity: 0.6; */
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-overlay-text #banner-overlay-text-change{
+        color:white;
+        font-weight: 600;
+        font-size: 72px;
+    }
+    .banner-overlay-text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* transform: translateY(-50%); */
+        background: #1c6b6e52;
+        vertical-align: middle;
+        display: grid;
+        align-items: center;
+        height: 98.5%;
+    }
+    .html5-video-player:not(.ytp-transparent) {
+    background-color: white;
+}
+.banner-cards-section{
+    /* margin-top:10vh; */
+}
+.banner-cards-section>div{
+    position:relative;
+    top:-140px;
+}
+.banner-cards {
+    border-radius: 8px 32px 8px 8px!important;
+    border: 10px solid #FFFFFF;
+    background: #F5F5F5;
+}
+.banner-cards-buttons{
+    background-color: orange;
+    font-weight: bold;
+    color:white;
+}
+.banner-cards>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+img.workforce-management{
+    border:10px solid #F5F5F5;
+}
+h2.workforce-management{
+    font-size: 48px;
+    font-weight: 500;
+}
+section.banner-cards-section , section.sponsor , section.images-gallery{
+    background-attachment: scroll;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("./img/dot.png");
+
+}
+.fb-icon>i:hover{
+    color:rgb(36, 88, 230);
+}
+.yt-icon>i:hover{
+    color:rgb(168, 9, 9);
+}
+.li-icon>i:hover{
+    color:rgb(7, 89, 195);
+}
+.images-gallery-div>div{
+    background:white;
+}
+.images-gallery img{
+    transition: all 0.7s ease-in-out;
+    opacity: 0.88;
+}
+.images-gallery img:hover{
+     transform: scale(1.020); 
+     box-shadow: 3px 4px 12px 0px;
+     opacity: 1;
+     cursor: pointer;
+}
+section.bg-akhawards{
+    margin-top:-30px;
+}
+.footer{
+    margin-bottom: -50px;
+}
+.footer>*{
+    color:rgba(0,0,0,.55);
+}
+iframe.entered.lazyloaded{
+    width:100% !important;
+}
+@media (max-width: 792px){
+    .banner-akhawards>iframe{
+        height:58vh !important;
+    }
+    .banner-overlay-text{
+        height: 60% !important;
+    }
+    img.w-20, img.w-25, div.w-lt-20{
+        width:49% !important;
+    }
+    .mb-title-header{
+        font-size:18px !important;
+        font-weight:600 !important;
+    }
+    .banner-cards-section>div {
+        top:0 !important;
+    }
+    .banner-overlay-text div.w-50{
+        width:100% !important;
+    }
+    section.bg-akhawards{
+        margin-top:-15px !important;
+    }
+    .footer a{
+        font-size: 12px !important;
+    }
+}
+</style>
+
+
+<div id="myTopToggle">Top</div>
+<section class="bg-akhawards fixed-top pt-4 shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-lg px-2">
+            <a class="navbar-brand w-10" href="#">
+                <img src="./img/logo.png" class="nav-logo w-100" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#akhNavbarScroll" aria-controls="navbarScroll"  aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse pt-3" id="akhNavbarScroll">
+                <ul class="nav navbar-nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+                    
+                    <li class="nav-item px-2" role="presentation">
+                        <a href="#" class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" target="_blank">Announcements</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a href="#" class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" target="_blank">Award Categories</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a href="#" class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" target="_blank">Sponsors & Partners</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a href="#" class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" target="_blank">About</a>
+                    </li>
+                    <li class="nav-item px-2" role="presentation">
+                        <a href="#" class="nav-link mr-3  bg-transparent rounded-0 border-0 page-menu-items" target="_blank">Contact</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="banner-akhawards" style="top:-64px;position:relative;">
+    <div class="l-section-video" id="us_bg_video_rce1">
+        <iframe title="Youtube video player" src="//www.youtube.com/embed/oRDRfikj2z8?autoplay=1&loop=1&playlist=oRDRfikj2z8&controls=0&mute=1&iv_load_policy=3&disablekb=1&wmode=transparent" allowfullscreen="1" loading="lazy" data-rocket-lazyload="fitvidscompatible" data-lazy-src="//www.youtube.com/embed/oRDRfikj2z8?autoplay=1&loop=1&playlist=oRDRfikj2z8&controls=0&mute=1&iv_load_policy=3&disablekb=1&wmode=transparent" data-ll-status="loaded" class="entered lazyloaded" style="width: 1519px; height: 855px;"></iframe><noscript><iframe title="Youtube video player" src="//www.youtube.com/embed/oRDRfikj2z8?autoplay=1&loop=1&playlist=oRDRfikj2z8&controls=0&mute=1&iv_load_policy=3&disablekb=1&wmode=transparent" allowfullscreen="1" loading="lazy"></iframe></noscript>
+    </div>
+	<!-- <iframe title="Youtube video player" src="//www.youtube.com/embed/-VKn0LE1DN0?autoplay=1&loop=1&playlist=-VKn0LE1DN0&controls=0&mute=1&iv_load_policy=3&disablekb=1&wmode=transparent" allowfullscreen="1" loading="lazy" data-rocket-lazyload="fitvidscompatible" data-lazy-src="//www.youtube.com/embed/-VKn0LE1DN0?autoplay=1&loop=1&playlist=-VKn0LE1DN0&controls=0&mute=1&iv_load_policy=3&disablekb=1&wmode=transparent" data-ll-status="loaded" class="entered lazyloaded" style="width: 1519px; height: 855px;"></iframe> -->
+    <div class="banner-overlay-text">
+        <div class="text-center text-white">
+            <div class="w-50 d-inline-block">
+                <h2 id="banner-overlay-text-change" class="roboto mb-title-header">APPLICATION PORTAL</h2>
+                <p class="mb-description">
+                    akh Awards is an annual awards program run by akh, born from a desire to elevate the hard-working teams helping businesses adapt and pivot to today’s new ways of working.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner-cards-section pt-3">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5 offset-lg-1 p-3">
+                    <div class="banner-cards shadow-lg p-4 text-center h-100">
+                        <h5>Nominate Yourself</h5>
+                        <p>or</p>
+                        <h5>Someone Else</h5>
+                        <div class="h-50">
+                            <button id="btn-apply" class="btn banner-cards-buttons px-5">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 p-3">
+                    <div class="banner-cards shadow-lg p-4 text-center h-100">
+                        <h5>Update Your Application</h5>
+                        <p>or</p>
+                        <h5>Apply For Another Award</h5>
+                        <div class="h-50">
+                            <button id="btn-sing-in" class="btn banner-cards-buttons px-5">Sign In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sponsor pb-5" data-aos="fade-down">
+    <div class="container-lg">
+        <h3 class="text-center pb-3"><b> Proudly Supported By</b></h3>
+        <div class="row">
+            <div class="col-12 col-lg-12 text-center">
+                <img src="./img/sponsor.jpeg" alt="" class="w-25">
+            </div>
+            <div class="col-12 col-lg-12 text-center">
+                <img src="./img/sponsor.jpeg" alt="" class="w-20 p-4">
+            
+                <img src="./img/sponsor.jpeg" alt="" class="w-20 p-4">
+            
+                <img src="./img/sponsor.jpeg" alt="" class="w-20 p-4">
+
+                <img src="./img/sponsor.jpeg" alt="" class="w-20 p-4">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4" data-aos="fade-down">
+    <div class="container-lg py-4">
+        <div class="row">
+            <div class="col-lg-6 h-100 px-5">
+                <h2 class="workforce-management mb-title-header">CHAMPIONING INNOVATIVE GLOBAL WORKFORCE MANAGEMENT</h2>
+                <p>
+                    The akh Awards Gala recognises the outstanding achievements of global workforce management professionals and the industries that support them.
+                </p>
+                <p>
+                    Showcase your unique skills, recognise employees doing extraordinary things, and celebrate as a community with your peers and your clients.
+                </p>
+                <b>Reasons to get involved?</b>
+                <ul>
+                    <li>Demonstrate your values and passion for improving employee mobility</li>
+                    <li>Associate your brand with excellence in global talent management and customer service</li>
+                    <li>Enhance your employer brand and talent attraction efforts</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 h-100 d-flex align-center justify-content-center p-5">
+                <img src="./img/wedding-dance.jpg" alt="" class="rounded shadow-sm workforce-management w-100">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="images-gallery pt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 images-gallery-div text-center">
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+                <div class="d-inline-block w-lt-20 p-1 shadow-sm">
+                    <img src="./img/wedding-dance.jpg" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="footer bg-light" data-aos="fade-down">
+    <div class="container-lg py-4">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-2 p-4">
+                <h3><b>Contact</b></h3>
+                <ul class="list-unstyled">
+                    <li class="py-2">
+                        <span class="bg-white p-2"><i class="fas fa-mobile-alt"></i></span>  
+                        <a href="tel:+959450084004" class="text-decoration-none text-dark">+959450084004</a>
+                    </li>
+                    <li class="py-2">
+                        <span class="bg-white p-2"><i class="fas fa-map-marker-alt"></i></span>  
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark"><< Business Address>></a>
+                    </li>
+                    <li class="py-2">
+                        <span class="bg-white p-2"><i class="fas fa-envelope"></i></span>  
+                        <a href="mailto:dev.aungkyawhtwe@gmail.com" class="text-decoration-none text-dark">dev.aungkyawhtwe@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h3><b>Get Social</b></h3>
+                <div class="d-inline-block p-2">
+                    <span class="rounded border bg-white px-1 py-3 ">
+                        <a href="https://www.facebook.com/<< your_company>>" class="btn btn-sm btn-white fb-icon" target="_blank">
+                            <i class="fab fa-facebook-square fa-2x"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="d-inline-block p-2">
+                    <span class="rounded border bg-white px-1 py-3 ">
+                        <a href="https://www.youtube.com/channel/<< your_company>>" class="btn btn-sm btn-white yt-icon" target="_blank">
+                            <i class="fab fa-youtube fa-2x"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="d-inline-block p-2">
+                    <span class="rounded border bg-white px-1 py-3 ">
+                        <a href="https://www.linkedin.com/company/<< your_company>>" class="btn btn-sm btn-white li-icon" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="d-inline-block p-2">
+                    <span class="rounded border bg-white px-1 py-3 ">
+                        <a href="https://www.linkedin.com/showcase/<< your_company>>/?viewAsMember=true" class="btn btn-sm btn-white li-icon" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    AOS.init({	duration: 1200});
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myTopToggle").style.display = "block";
+            $('.bg-akhawards').addClass('scroll');
+        } else {
+            document.getElementById("myTopToggle").style.display = "none";
+            $('.bg-akhawards').removeClass('scroll');
+        }
+    }
+    $(document).ready(function(){
+        $('#myTopToggle').click(function(){
+            topFunction();
+        });
+        var navTogglerCloseIcon='<i class="fas fa-times"></i>';
+        var navTogglerCollapseIcon='<i class="fas fa-bars"></i>';
+        $('.navbar-toggler').click(function(){
+            if($(this).attr('aria-expanded')=="true"){
+                $(this).empty().append(navTogglerCloseIcon);
+                $('.bg-akhawards').addClass('scroll');
+            }else{
+                $(this).empty().append(navTogglerCollapseIcon);
+            }
+        });
+        $('#btn-apply').click(function(){
+            var href_link = $("#entrant-topbar-right1 .btn-success").attr("href");
+			window.location.href= href_link;
+        });
+        $('#btn-sing-in').click(function(){
+            var href_link = $("#entrant-topbar-right1 .btn-success").attr("href");
+			window.location.href= href_link;
+        }); 
+    });
+        
+        function ctrlShiftKey(e, keyCode) {
+                return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+                }
+
+                document.onkeydown = (e) => {
+                // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+                if (
+                    event.keyCode === 123 ||
+                    ctrlShiftKey(e, 'I') ||
+                    ctrlShiftKey(e, 'J') ||
+                    ctrlShiftKey(e, 'C') ||
+                    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+                )
+                    return false;
+                };
+
+                $(function() {
+                    $(this).bind("contextmenu", function(e) {
+                        e.preventDefault();
+                    });
+                });
+</script>
