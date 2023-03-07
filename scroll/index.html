@@ -856,6 +856,12 @@ document.onkeydown = (e) => {
   )
     return false;
 };
+
+$(function() {
+        $(this).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    });
     </script>
 	
 </body>
